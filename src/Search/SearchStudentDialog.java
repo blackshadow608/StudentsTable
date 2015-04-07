@@ -1,16 +1,15 @@
-package AddStudent;
+package Search;
 
+import AddStudent.EnterDateComponent;
 import MainPackge.Controller;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
- * Created by USER on 03.04.15.
+ * Created by USER on 07.04.15.
  */
-public class AddStudentDialog extends JDialog {
+public class SearchStudentDialog extends JDialog {
     private JTextField name;
 
     private JButton addButton;
@@ -21,7 +20,7 @@ public class AddStudentDialog extends JDialog {
     private DefaultTableModel model;
 
 
-    public AddStudentDialog(Controller control, DefaultTableModel model){
+    public SearchStudentDialog(Controller control, DefaultTableModel model){
         this.model = model;
         this.controller = control;
         name = new JTextField(30);
@@ -61,18 +60,8 @@ public class AddStudentDialog extends JDialog {
         dataBox.add(addButton);
 
         add(new JPanel().add(boxMain));
-        initListeners();
+        //initListeners();
         pack();
     }
-    private void initListeners(){
-        addButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-               controller.addNewStudent(name.getText(), birthday.getDate(), dateEnter.getDate(),
-                       dateFinish.getDate());
-            }
-        });
-
-}
 
 }

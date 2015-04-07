@@ -1,12 +1,14 @@
 package MainPackge;
 
 import AddStudent.AddStudentDialog;
+import Search.SearchStudentDialog;
 //import Search.NameAndDate;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 /**
  * Created by USER on 30.03.15.
@@ -17,6 +19,9 @@ public class MainView {
     private JButton previousPage;
     private JTable table;
     private JMenuItem addStudent = new JMenuItem("Добавить студента");
+    private JMenuItem saveFile = new JMenuItem("Сохранить");
+    private JMenuItem openFile = new JMenuItem("Открыть");
+    JMenuItem find = new JMenuItem("Найти студента");
     private Controller controller;
     private DefaultTableModel model;
 
@@ -35,11 +40,11 @@ public class MainView {
         menuBar.add(fileMenu);
         menuBar.add(searchMenu);
 
-        JMenuItem openFile = new JMenuItem("Открыть");
+
         fileMenu.add(openFile);
-        JMenuItem saveFile = new JMenuItem("Сохранить");
+
         fileMenu.add(saveFile);
-        JMenuItem find = new JMenuItem("Найти студента");
+
         searchMenu.add(find);
 
         fileMenu.add(addStudent);
@@ -78,6 +83,28 @@ public class MainView {
                 AddStudentDialog dialog = new AddStudentDialog(controller,model);
                 dialog.setVisible(true);
                // model.addRow(dialog.ser());
+            }
+        });
+        saveFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                    controller.Save();
+
+            }
+        });
+        openFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //controller.Open();
+                table.setModel(controller.Open());
+            }
+        });
+        find.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SearchStudentDialog dialog = new SearchStudentDialog(controller,model);
+                dialog.setVisible(true);
             }
         });
     }

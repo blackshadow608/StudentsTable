@@ -22,24 +22,24 @@ public class Student {
         this.birthday = birthday;
     }
 
-    public String getBirthday() {
-        return birthday.toString();
+    public Date getBirthday() {
+        return birthday;
     }
 
     public void setEnterDate(Date enterDate) {
         this.enterDate = enterDate;
     }
 
-    public String getEnterDate() {
-        return enterDate.toString();
+    public Date getEnterDate() {
+        return enterDate;
     }
 
     public void setFinishDate(Date finishDate) {
         this.finishDate = finishDate;
     }
 
-    public String getFinishDate() {
-        return finishDate.toString();
+    public Date getFinishDate() {
+        return finishDate;
     }
 
 

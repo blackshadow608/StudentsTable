@@ -1,6 +1,5 @@
 package Model;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -25,6 +24,17 @@ public class StudentList {
         students.add(newStudent);
     }
 
+    public void deleteStudent (String name, Date birthday, Date enterDate, Date finishDate){
+        for(int currentStudent = 0; currentStudent < students.size(); currentStudent++){
+            if(name.equals(students.get(currentStudent).getName()) &&
+                    birthday == students.get(currentStudent).getBirthday()&&
+                    enterDate == students.get(currentStudent).getEnterDate() &&
+                    finishDate == students.get(currentStudent).getFinishDate()){
+                students.remove(currentStudent);
+            }
+        }
+    }
+
     public Object[] getNames(){
         ArrayList<String> namesList = new ArrayList();
         for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
@@ -34,30 +44,31 @@ public class StudentList {
         return namesList.toArray();
     }
 
-    public Object[] getBirthdays(){
-        ArrayList<String> birthdaysList = new ArrayList();
+    public ArrayList getBirthdays(){
+        ArrayList<Date> birthdaysList = new ArrayList();
         for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
             birthdaysList.add(students.get(numberOfStudent).getBirthday());
         }
 
-        return birthdaysList.toArray();
+        birthdaysList.toArray();
+        return birthdaysList;
     }
 
-    public Object[] getEnterDate(){
-        ArrayList<String> enterDateList = new ArrayList();
+    public ArrayList getEnterDate(){
+        ArrayList<Date> enterDateList = new ArrayList();
         for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
             enterDateList.add(students.get(numberOfStudent).getEnterDate());
         }
 
-        return enterDateList.toArray();
+        return enterDateList;
     }
 
-    public Object[] getFinishDate(){
-        ArrayList<String> finishDateList = new ArrayList();
+    public ArrayList getFinishDate(){
+        ArrayList<Date> finishDateList = new ArrayList();
         for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
             finishDateList.add(students.get(numberOfStudent).getFinishDate());
         }
 
-        return finishDateList.toArray();
+        return finishDateList;
     }
 }

@@ -1,4 +1,4 @@
-package MainPackge;
+package AddStudent;
 
 import javax.swing.*;
 import java.util.Date;

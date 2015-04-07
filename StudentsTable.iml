@@ -7,6 +7,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../xstream-1.1.2.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../../xstream-1.1.2.jar" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="xstream-1.4.8" level="project" />
   </component>
 </module>
 
