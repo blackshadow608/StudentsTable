@@ -13,9 +13,9 @@ public class SearchStudentDialog extends JDialog {
     private JTextField name;
 
     private JButton addButton;
-    private EnterDateComponent birthday;
-    private EnterDateComponent dateEnter;
-    private EnterDateComponent dateFinish;
+    private SearchDateComponent birthday;
+    private SearchDateComponent dateEnter;
+    private SearchDateComponent dateFinish;
     private Controller controller;
     private DefaultTableModel model;
 
@@ -24,9 +24,9 @@ public class SearchStudentDialog extends JDialog {
         this.model = model;
         this.controller = control;
         name = new JTextField(30);
-        birthday = new EnterDateComponent();
-        dateEnter = new EnterDateComponent();
-        dateFinish = new EnterDateComponent();
+        birthday = new SearchDateComponent();
+        dateEnter = new SearchDateComponent();
+        dateFinish = new SearchDateComponent();
         addButton = new JButton("Добавить");
         setResizable(false);
 

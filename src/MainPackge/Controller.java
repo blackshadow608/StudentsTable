@@ -22,8 +22,18 @@ import java.util.Date;
 public class Controller {
     private DefaultTableModel model = new DefaultTableModel();
     private StudentList studentList;
+    private String dateFormat;
+    private String separator;
+    private int page;
+    private int currentPage;
+    private int numOfRows;
 
     public Controller(StudentList studentList){
+        this.separator = ":";
+        this.dateFormat = "dd" + separator + "MM" + separator + "y";
+        this.page = 1;
+        this.currentPage = 1;
+        this.numOfRows = 37;
         this.studentList = studentList;
         model.addColumn("ФИО");
         model.addColumn("Дата рождения");
@@ -36,9 +46,12 @@ public class Controller {
 
     public void addNewStudent(String name, Date birthday, Date enterDate, Date finishDate){
         studentList.addStudent(name,birthday,enterDate,finishDate);
-        SimpleDateFormat format1 = new SimpleDateFormat("dd:MM:y");
-        String [] row = {name,format1.format(birthday),format1.format(enterDate), format1.format(finishDate)};
-        model.addRow(row);
+
+//        SimpleDateFormat format1 = new SimpleDateFormat(dateFormat);
+//        String [] row = {name,format1.format(birthday),format1.format(enterDate), format1.format(finishDate)};
+//        model.addRow(row);
+        this.updateModel();
+
     }
 
     public void Save() {
@@ -63,7 +76,7 @@ public class Controller {
             e.printStackTrace();
         }
     }
-    public DefaultTableModel Open(){
+    public void Open(){
         //("D:/таблица.xml");
         JFileChooser fileChooser = new JFileChooser();
 
@@ -80,32 +93,61 @@ public class Controller {
 
             xstream.fromXML(file, studentList);
 
-            return this.updateModel();
+             this.updateModel();
         }
-        return this.updateModel();
+         this.updateModel();
     }
 
-    public DefaultTableModel updateModel(){
+    public void updateModel(){
+        page = (studentList.size() / numOfRows) + 1;
         Object [] names = studentList.getNames();
         ArrayList<Date> birthdays = studentList.getBirthdays();
         ArrayList<Date> enterDates = studentList.getEnterDate();
         ArrayList<Date> finishDates = studentList.getFinishDate();
 
-        model = null;
-        model = new DefaultTableModel();
-        model.addColumn("ФИО");
-        model.addColumn("Дата рождения");
-        model.addColumn("Дата поступления");
-        model.addColumn("Дата окончания");
-        SimpleDateFormat format1 = new SimpleDateFormat("dd:MM:y");
+//        model = null;
+//        model = new DefaultTableModel();
+//        model.addColumn("ФИО");
+//        model.addColumn("Дата рождения");
+//        model.addColumn("Дата поступления");
+//        model.addColumn("Дата окончания");
+        for (int rowCount = 0; rowCount < model.getRowCount(); rowCount++){
+            model.removeRow(rowCount);
+        }
+        SimpleDateFormat format1 = new SimpleDateFormat(dateFormat);
+//        int rows;
+//        rows = (currentPage - 1) * (numOfRows);
+//        int numOfLastRow;
+//        numOfLastRow = rows + numOfRows-1;
+//        if(names.length < numOfLastRow) {
+//            numOfLastRow = names.length;
+//        }
         for (int row = 0 ; row < names.length; row++){
 
             String[] rowData = {names[row].toString(), format1.format(birthdays.get(row)),
                     format1.format(enterDates.get(row)), format1.format(finishDates.get(row))};
             model.addRow(rowData);
         }
-        return model;
 
+
+    }
+
+    private void setRows(int rows){
+        this.numOfRows = rows;
+    }
+
+    public void setSetting(int rows){
+        numOfRows = rows;
+        updateModel();
+//        if(!settings[0].equals("")){
+//        setRows(Integer.parseInt(settings[0]));
+//        }
+//        if(!settings[1].equals("")) {
+//            this.separator = settings[1];
+//        }
+//        if(!settings[2].equals("")) {
+//            this.dateFormat = settings[2];
+//        }
     }
 
 }

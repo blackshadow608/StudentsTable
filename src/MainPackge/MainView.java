@@ -2,6 +2,7 @@ package MainPackge;
 
 import AddStudent.AddStudentDialog;
 import Search.SearchStudentDialog;
+import SettingsMenu.Settings;
 //import Search.NameAndDate;
 
 import javax.swing.*;
@@ -21,7 +22,8 @@ public class MainView {
     private JMenuItem addStudent = new JMenuItem("Добавить студента");
     private JMenuItem saveFile = new JMenuItem("Сохранить");
     private JMenuItem openFile = new JMenuItem("Открыть");
-    JMenuItem find = new JMenuItem("Найти студента");
+    private JMenuItem settingsMenu = new JMenuItem("Настройки таблицы");
+    private JMenuItem find = new JMenuItem("Найти студента");
     private Controller controller;
     private DefaultTableModel model;
 
@@ -36,10 +38,13 @@ public class MainView {
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu searchMenu = new JMenu("Поиск");
+        JMenu settings = new JMenu("Настройки");
 
         menuBar.add(fileMenu);
         menuBar.add(searchMenu);
+        menuBar.add(settings);
 
+        settings.add(settingsMenu);
 
         fileMenu.add(openFile);
 
@@ -80,8 +85,9 @@ public class MainView {
         addStudent.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                AddStudentDialog dialog = new AddStudentDialog(controller,model);
+                AddStudentDialog dialog = new AddStudentDialog(controller,table);
                 dialog.setVisible(true);
+
                // model.addRow(dialog.ser());
             }
         });
@@ -106,6 +112,14 @@ public class MainView {
             public void actionPerformed(ActionEvent e) {
                 SearchStudentDialog dialog = new SearchStudentDialog(controller,model);
                 dialog.setVisible(true);
+            }
+        });
+        settingsMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Settings settingsDialog = new Settings(controller);
+                settingsDialog.setVisible(true);
+               // table.setModel(controller.getModel());
             }
         });
     }

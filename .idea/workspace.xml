@@ -67,10 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Student.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Student.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="23" selection-start="523" selection-end="523" vertical-scroll-proportion="0.5786062" vertical-offset="0" max-vertical-offset="850">
+            <state line="33" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -79,17 +79,22 @@
       <file leaf-file-name="StudentList.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="48" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1360">
+            <state line="63" column="5" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Controller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="77" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1989">
-              <folding />
+            <state line="123" column="11" selection-start="4390" selection-end="4390" vertical-scroll-proportion="2.2831714" vertical-offset="408" max-vertical-offset="2431">
+              <folding>
+                <element signature="e#1306#1307#0" expanded="true" />
+                <element signature="e#1334#1335#0" expanded="true" />
+                <element signature="e#4722#4723#0" expanded="true" />
+                <element signature="e#4759#4760#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +102,7 @@
       <file leaf-file-name="SearchStudentDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Search/SearchStudentDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="48" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="1241">
+            <state line="18" column="34" selection-start="437" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
               <folding />
             </state>
           </provider>
@@ -106,8 +111,10 @@
       <file leaf-file-name="SearchDateComponent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Search/SearchDateComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="3" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="255">
-              <folding />
+            <state line="42" column="20" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="918">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,8 +122,11 @@
       <file leaf-file-name="AddStudentDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="0" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1428">
-              <folding />
+            <state line="71" column="45" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1343">
+              <folding>
+                <element signature="e#2077#2345#0" expanded="true" />
+                <element signature="e#2334#2335#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,8 +134,25 @@
       <file leaf-file-name="MainView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="52" selection-start="3026" selection-end="3026" vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="2006">
-              <folding />
+            <state line="121" column="17" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.0" vertical-offset="1354" max-vertical-offset="2040">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3610#3909#0" expanded="true" />
+                <element signature="e#3898#3899#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SettingsMenu/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="53" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="1190">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1813#2241#0" expanded="true" />
+                <element signature="e#2230#2231#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,16 +160,7 @@
       <file leaf-file-name="EnterDateComponent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainClass.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MainPackge/MainClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="408">
+            <state line="38" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -173,16 +191,18 @@
         <option value="$PROJECT_DIR$/src/MainClass.java" />
         <option value="$PROJECT_DIR$/src/Search/NameAndDate.java" />
         <option value="$PROJECT_DIR$/src/Model/MyDate.java" />
-        <option value="$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java" />
         <option value="$PROJECT_DIR$/src/MainPackge/EnterDateComponent.java" />
         <option value="$PROJECT_DIR$/src/MainPackge/MainClass.java" />
-        <option value="$PROJECT_DIR$/src/Model/StudentList.java" />
         <option value="$PROJECT_DIR$/src/Search/SearchViewDialog.java" />
-        <option value="$PROJECT_DIR$/src/Search/SearchStudentDialog.java" />
+        <option value="$PROJECT_DIR$/src/Model/Student.java" />
         <option value="$PROJECT_DIR$/src/Search/SearchDateComponent.java" />
+        <option value="$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java" />
+        <option value="$PROJECT_DIR$/src/Search/SearchStudentDialog.java" />
+        <option value="$PROJECT_DIR$/src/Model/StudentList.java" />
+        <option value="$PROJECT_DIR$/src/SettingsMenu/Settings.java" />
+        <option value="$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java" />
         <option value="$PROJECT_DIR$/src/MainPackge/MainView.java" />
         <option value="$PROJECT_DIR$/src/MainPackge/Controller.java" />
-        <option value="$PROJECT_DIR$/src/Model/Student.java" />
       </list>
     </option>
   </component>
@@ -257,7 +277,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Search" />
+              <option name="myItemId" value="SettingsMenu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,10 +292,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,24 +310,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MainPackge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="studentsTable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StudentsTable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddStudent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,12 +633,12 @@
       <workItem from="1428398621953" duration="2479000" />
       <workItem from="1428402759089" duration="15603000" />
       <workItem from="1428516369435" duration="870000" />
-      <workItem from="1428602107849" duration="30000" />
+      <workItem from="1428602107849" duration="12749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67010000" />
+    <option name="totallyTimeSpent" value="79729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
@@ -655,22 +653,22 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39910313" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25112107" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847533" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24866879" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25027323" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24866879" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847533" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -695,13 +693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="5" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="44" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1173">
@@ -712,21 +703,33 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="26" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
-          <folding />
+          <folding>
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
+            <element signature="e#4759#4760#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="2240" selection-end="2240" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="1445">
-          <folding />
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="23" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1530">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -761,21 +764,33 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="26" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="646">
-          <folding />
+          <folding>
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
+            <element signature="e#4759#4760#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="2240" selection-end="2240" vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="1445">
-          <folding />
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="23" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1530">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -810,21 +825,33 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
-          <folding />
+          <folding>
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
+            <element signature="e#4759#4760#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1309">
-          <folding />
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -852,21 +879,33 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
-          <folding />
+          <folding>
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
+            <element signature="e#4759#4760#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1462">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1309">
-          <folding />
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -880,14 +919,21 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="40" selection-start="2173" selection-end="2173" vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1411">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="1054">
-          <folding />
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -901,14 +947,21 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="46" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1292">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="408">
-          <folding />
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -922,7 +975,11 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="41" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1428">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -936,7 +993,11 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="20" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1224">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -950,7 +1011,11 @@
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="28" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="918">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -981,55 +1046,6 @@
         <state line="36" column="0" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.83388704" vertical-offset="93" max-vertical-offset="697" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="0" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0" vertical-offset="652" max-vertical-offset="1292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchStudentDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="48" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="1241">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchDateComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="48" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="52" selection-start="3026" selection-end="3026" vertical-scroll-proportion="0.0" vertical-offset="1032" max-vertical-offset="1666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="77" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="1683">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -1039,8 +1055,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="23" selection-start="523" selection-end="523" vertical-scroll-proportion="0.5786062" vertical-offset="0" max-vertical-offset="850">
+        <state line="33" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchDateComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="20" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="918">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="5" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchStudentDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="34" selection-start="437" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SettingsMenu/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="53" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1190">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1813#2241#0" expanded="true" />
+            <element signature="e#2230#2231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="17" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.0" vertical-offset="1354" max-vertical-offset="2040">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3610#3909#0" expanded="true" />
+            <element signature="e#3898#3899#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="45" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1343">
+          <folding>
+            <element signature="e#2077#2345#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="11" selection-start="4390" selection-end="4390" vertical-scroll-proportion="2.2831714" vertical-offset="408" max-vertical-offset="2431">
+          <folding>
+            <element signature="e#1306#1307#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#4722#4723#0" expanded="true" />
+            <element signature="e#4759#4760#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

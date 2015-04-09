@@ -37,8 +37,8 @@ public class StudentList {
 
     public Object[] getNames(){
         ArrayList<String> namesList = new ArrayList();
-        for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
-            namesList.add(students.get(numberOfStudent).getName());
+        for (Student student : students) {
+            namesList.add(student.getName());
         }
 
         return namesList.toArray();
@@ -46,8 +46,8 @@ public class StudentList {
 
     public ArrayList getBirthdays(){
         ArrayList<Date> birthdaysList = new ArrayList();
-        for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
-            birthdaysList.add(students.get(numberOfStudent).getBirthday());
+        for (Student student : students) {
+            birthdaysList.add(student.getBirthday());
         }
 
         birthdaysList.toArray();
@@ -56,8 +56,8 @@ public class StudentList {
 
     public ArrayList getEnterDate(){
         ArrayList<Date> enterDateList = new ArrayList();
-        for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
-            enterDateList.add(students.get(numberOfStudent).getEnterDate());
+        for (Student student : students) {
+            enterDateList.add(student.getEnterDate());
         }
 
         return enterDateList;
@@ -65,10 +65,14 @@ public class StudentList {
 
     public ArrayList getFinishDate(){
         ArrayList<Date> finishDateList = new ArrayList();
-        for(int numberOfStudent = 0; numberOfStudent < students.size(); numberOfStudent++ ){
-            finishDateList.add(students.get(numberOfStudent).getFinishDate());
+        for (Student student : students) {
+            finishDateList.add(student.getFinishDate());
         }
 
         return finishDateList;
+    }
+
+    public int size(){
+        return students.size();
     }
 }

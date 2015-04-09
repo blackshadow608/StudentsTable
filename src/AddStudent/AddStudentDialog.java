@@ -18,11 +18,11 @@ public class AddStudentDialog extends JDialog {
     private EnterDateComponent dateEnter;
     private EnterDateComponent dateFinish;
     private Controller controller;
-    private DefaultTableModel model;
+    private JTable table;
 
 
-    public AddStudentDialog(Controller control, DefaultTableModel model){
-        this.model = model;
+    public AddStudentDialog(Controller control,JTable table){
+        this.table = table;
         this.controller = control;
         name = new JTextField(30);
         birthday = new EnterDateComponent();
