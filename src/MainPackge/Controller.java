@@ -44,18 +44,25 @@ public class Controller {
     public void Save() {
 
         try {
+            //File file = new File("D:/таблица.xml");
+            JFileChooser fileChooser = new JFileChooser();
 
-
-        File file = new File("D:/таблица.xml");
-        XStream xstream = new XStream(new StaxDriver());
-        xstream.alias("student", Student.class);
-        xstream.alias("studentList", StudentList.class);
-
-              xstream.toXML(studentList, new FileOutputStream(file));
+            int returnVal =  fileChooser.showDialog(null, "Сохранить");
+            FileNameExtensionFilter filter;
+            filter = new FileNameExtensionFilter("xml","XML");
+            fileChooser.addChoosableFileFilter(filter);
+            File file;
+            file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+            if(filter.accept(file)){
+                XStream xstream = new XStream(new StaxDriver());
+                xstream.alias("student", Student.class);
+                xstream.alias("studentList", StudentList.class);
+                xstream.toXML(studentList, new FileOutputStream(file));
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        }
+    }
     public DefaultTableModel Open(){
         //("D:/таблица.xml");
         JFileChooser fileChooser = new JFileChooser();
@@ -76,7 +83,6 @@ public class Controller {
             return this.updateModel();
         }
         return this.updateModel();
-
     }
 
     public DefaultTableModel updateModel(){

@@ -97,7 +97,8 @@ public class MainView {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //controller.Open();
-                table.setModel(controller.Open());
+                controller.Open();
+                table.setModel(controller.getModel());
             }
         });
         find.addActionListener(new ActionListener() {
