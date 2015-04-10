@@ -27,55 +27,40 @@ public class MainView {
     private JMenuItem settingsMenu = new JMenuItem("Настройки таблицы");
     private JMenuItem find = new JMenuItem("Найти студента");
     private JLabel currentPage = new JLabel("Страница : ");
+    private JLabel numOfRecords = new JLabel("asdasd");
     private Controller controller;
     private DefaultTableModel model;
-   // private String currentPage;
 
     MainView(Controller controller){
         this.controller = controller;
         currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                 " / " + String.valueOf(controller.getPage()));
-        JPanel panel = new JPanel();
-
-        previousPage = new JButton("<");
+        numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
+         previousPage = new JButton("<");
         toFirstsPage = new JButton("<<");
         nextPage = new JButton(">");
         toLastPage = new JButton(">>");
-
         JFrame mainFrame = new JFrame();
         JMenuBar menuBar = new JMenuBar();
         JMenu fileMenu = new JMenu("Файл");
         JMenu searchMenu = new JMenu("Поиск");
         JMenu settings = new JMenu("Настройки");
-
         menuBar.add(fileMenu);
         menuBar.add(searchMenu);
         menuBar.add(settings);
-
         settings.add(settingsMenu);
-
         fileMenu.add(openFile);
-
         fileMenu.add(saveFile);
-
         searchMenu.add(find);
-
         fileMenu.add(addStudent);
-
         model = controller.getModel();
         table = new JTable(model);
-       // table.setSize(900,500);
-
-        /*model.addColumn("ФИО");
-        model.addColumn("Дата рождения");
-        model.addColumn("Дата поступления");
-        model.addColumn("Дата окончания");*/
-
         Box box = Box.createVerticalBox();
+        Box labelBox = Box.createHorizontalBox();
+        labelBox.add(numOfRecords);
+        box.add(labelBox);
         box.add(new JScrollPane(table));
-        //panel.add(new JScrollPane(table));
-       // box.setSize(900,100000);
-
         Box buttonBox = Box.createHorizontalBox();
         buttonBox.add(toFirstsPage);
         buttonBox.add(Box.createHorizontalStrut(5));
@@ -87,8 +72,7 @@ public class MainView {
         buttonBox.add(Box.createHorizontalStrut(5));
         buttonBox.add(toLastPage);
         box.add(buttonBox);
-
-       // mainFrame.add(panel);
+        mainFrame.setTitle("Таблица студентов");
         mainFrame.setJMenuBar(menuBar);
         mainFrame.add(box);
 
@@ -101,10 +85,10 @@ public class MainView {
         addStudent.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                AddStudentDialog dialog = new AddStudentDialog(controller ,table, currentPage);
+                AddStudentDialog dialog = new AddStudentDialog(controller ,table, currentPage, numOfRecords);
                 dialog.setVisible(true);
-
-               // model.addRow(dialog.ser());
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
 
@@ -120,11 +104,12 @@ public class MainView {
         openFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //controller.Open();
                 controller.Open();
                 table.setModel(controller.getModel());
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
 
@@ -139,7 +124,7 @@ public class MainView {
         settingsMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Settings settingsDialog = new Settings(controller, table, currentPage);
+                Settings settingsDialog = new Settings(controller, table, currentPage, numOfRecords);
                 settingsDialog.setVisible(true);
                 table.setModel(controller.getModel());
             }
@@ -152,6 +137,8 @@ public class MainView {
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
                 table.setModel(controller.getModel());
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
 
@@ -162,6 +149,8 @@ public class MainView {
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
                 table.setModel(controller.getModel());
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
 
@@ -172,6 +161,8 @@ public class MainView {
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
                 table.setModel(controller.getModel());
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
 
@@ -182,6 +173,8 @@ public class MainView {
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
                 table.setModel(controller.getModel());
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
     }

@@ -137,18 +137,19 @@ public class Controller {
         this.numOfRows = rows;
     }
 
-    public void setSetting(int rows){
-        numOfRows = rows;
+    public void setSetting(String[] settings){
+
+        if(!settings[0].equals("")){
+        setRows(Integer.parseInt(settings[0]));
+        }
+        if(!settings[1].equals("")) {
+            this.separator = settings[1];
+            this.dateFormat = "dd" + separator + "MM" + separator + "y";
+        }
+        if(!settings[2].equals("")) {
+            this.dateFormat = settings[2];
+        }
         updateModel();
-//        if(!settings[0].equals("")){
-//        setRows(Integer.parseInt(settings[0]));
-//        }
-//        if(!settings[1].equals("")) {
-//            this.separator = settings[1];
-//        }
-//        if(!settings[2].equals("")) {
-//            this.dateFormat = settings[2];
-//        }
     }
 
     public void nextPage(){
@@ -181,6 +182,19 @@ public class Controller {
     public void lastPage(){
         currentPage = page;
         updateModel();
+    }
+
+    public int numOfAllStudents(){
+      return studentList.size();
+    }
+
+    public int numOfRecordsOnPage(){
+        if(currentPage == page){
+
+           return  studentList.size() - numOfRows * (page - 1);
+
+        }
+        return numOfRows;
     }
 
 }

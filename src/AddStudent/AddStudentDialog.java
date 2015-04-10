@@ -20,9 +20,12 @@ public class AddStudentDialog extends JDialog {
     private Controller controller;
     private JTable table;
     private JLabel currentPage;
+    private JLabel numOfRecords;
 
 
-    public AddStudentDialog(Controller control,JTable table, JLabel currentPage){
+    public AddStudentDialog(Controller control,JTable table, JLabel currentPage, JLabel numOfRecords){
+        this.numOfRecords = numOfRecords;
+        this.setTitle("Добавить студента");
         this.currentPage = currentPage;
         this.table = table;
         this.controller = control;
@@ -75,6 +78,8 @@ public class AddStudentDialog extends JDialog {
                 table.setModel(controller.getModel());
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
 

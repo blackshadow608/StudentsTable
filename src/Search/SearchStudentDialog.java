@@ -21,6 +21,7 @@ public class SearchStudentDialog extends JDialog {
 
 
     public SearchStudentDialog(Controller control, DefaultTableModel model){
+        this.setTitle("Поиск");
         this.model = model;
         this.controller = control;
         name = new JTextField(30);

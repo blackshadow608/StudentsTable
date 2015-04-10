@@ -18,8 +18,11 @@ public class Settings extends JDialog {
     private Controller controller;
     private JTable table;
     private JLabel currentPage;
+    private JLabel numOfRecords;
 
-    public Settings(Controller controller, JTable table, JLabel currentPage){
+    public Settings(Controller controller, JTable table, JLabel currentPage, JLabel numOfRecords){
+        this.numOfRecords = numOfRecords;
+        this.setTitle("Настройки");
         this.currentPage = currentPage;
         this.table = table;
         this.controller = controller;
@@ -59,13 +62,15 @@ public class Settings extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String [] settings = new String[3];
-                int rows = Integer.parseInt(numOfRows.getText());
-//                settings[1] = separator.getText();
-//                settings[2] = dateFormat.getText();
-                controller.setSetting(Integer.parseInt(numOfRows.getText()));
+                settings[0] = numOfRows.getText();
+                settings[1] = separator.getText();
+                settings[2] = dateFormat.getText();
+                controller.setSetting(settings);
                 table.setModel(controller.getModel());
                 currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
                         " / " + String.valueOf(controller.getPage()));
+                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
+                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
             }
         });
     }
