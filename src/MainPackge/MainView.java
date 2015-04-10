@@ -18,21 +18,29 @@ public class MainView {
 
     private JButton nextPage;
     private JButton previousPage;
+    private JButton toFirstsPage;
+    private JButton toLastPage;
     private JTable table;
     private JMenuItem addStudent = new JMenuItem("Добавить студента");
     private JMenuItem saveFile = new JMenuItem("Сохранить");
     private JMenuItem openFile = new JMenuItem("Открыть");
     private JMenuItem settingsMenu = new JMenuItem("Настройки таблицы");
     private JMenuItem find = new JMenuItem("Найти студента");
+    private JLabel currentPage = new JLabel("Страница : ");
     private Controller controller;
     private DefaultTableModel model;
+   // private String currentPage;
 
     MainView(Controller controller){
         this.controller = controller;
+        currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                " / " + String.valueOf(controller.getPage()));
         JPanel panel = new JPanel();
 
-        previousPage = new JButton("Предыдущая страница");
-        nextPage = new JButton("Следующая страница");
+        previousPage = new JButton("<");
+        toFirstsPage = new JButton("<<");
+        nextPage = new JButton(">");
+        toLastPage = new JButton(">>");
 
         JFrame mainFrame = new JFrame();
         JMenuBar menuBar = new JMenuBar();
@@ -56,7 +64,8 @@ public class MainView {
 
         model = controller.getModel();
         table = new JTable(model);
-        table.setSize(900,500);
+       // table.setSize(900,500);
+
         /*model.addColumn("ФИО");
         model.addColumn("Дата рождения");
         model.addColumn("Дата поступления");
@@ -64,17 +73,24 @@ public class MainView {
 
         Box box = Box.createVerticalBox();
         box.add(new JScrollPane(table));
-        panel.add(new JScrollPane(table));
-        box.setSize(800,800);
+        //panel.add(new JScrollPane(table));
+       // box.setSize(900,100000);
 
         Box buttonBox = Box.createHorizontalBox();
+        buttonBox.add(toFirstsPage);
+        buttonBox.add(Box.createHorizontalStrut(5));
         buttonBox.add(previousPage);
+        buttonBox.add(Box.createHorizontalStrut(5));
+        buttonBox.add(currentPage);
+        buttonBox.add(Box.createHorizontalStrut(5));
         buttonBox.add(nextPage);
+        buttonBox.add(Box.createHorizontalStrut(5));
+        buttonBox.add(toLastPage);
         box.add(buttonBox);
 
-        mainFrame.add(panel);
+       // mainFrame.add(panel);
         mainFrame.setJMenuBar(menuBar);
-        mainFrame.add(panel);
+        mainFrame.add(box);
 
         mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mainFrame.setVisible(true);
@@ -85,12 +101,13 @@ public class MainView {
         addStudent.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                AddStudentDialog dialog = new AddStudentDialog(controller,table);
+                AddStudentDialog dialog = new AddStudentDialog(controller ,table, currentPage);
                 dialog.setVisible(true);
 
                // model.addRow(dialog.ser());
             }
         });
+
         saveFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -99,14 +116,18 @@ public class MainView {
 
             }
         });
+
         openFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //controller.Open();
                 controller.Open();
                 table.setModel(controller.getModel());
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
             }
         });
+
         find.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -114,12 +135,53 @@ public class MainView {
                 dialog.setVisible(true);
             }
         });
+
         settingsMenu.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Settings settingsDialog = new Settings(controller);
+                Settings settingsDialog = new Settings(controller, table, currentPage);
                 settingsDialog.setVisible(true);
-               // table.setModel(controller.getModel());
+                table.setModel(controller.getModel());
+            }
+        });
+
+        nextPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.nextPage();
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
+                table.setModel(controller.getModel());
+            }
+        });
+
+        previousPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.prevPage();
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
+                table.setModel(controller.getModel());
+            }
+        });
+
+        toLastPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.lastPage();
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
+                table.setModel(controller.getModel());
+            }
+        });
+
+        toFirstsPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                controller.firstPage();
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
+                table.setModel(controller.getModel());
             }
         });
     }

@@ -70,7 +70,7 @@
       <file leaf-file-name="Student.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+            <state line="33" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -79,7 +79,7 @@
       <file leaf-file-name="StudentList.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="5" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1411">
+            <state line="66" column="41" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0" vertical-offset="791" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
@@ -88,12 +88,12 @@
       <file leaf-file-name="Controller.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="11" selection-start="4390" selection-end="4390" vertical-scroll-proportion="2.2831714" vertical-offset="408" max-vertical-offset="2431">
+            <state line="181" column="27" selection-start="5730" selection-end="5730" vertical-scroll-proportion="0.7152104" vertical-offset="2295" max-vertical-offset="2924">
               <folding>
-                <element signature="e#1306#1307#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#4722#4723#0" expanded="true" />
-                <element signature="e#4759#4760#0" expanded="true" />
+                <element signature="e#5500#5501#0" expanded="true" />
+                <element signature="e#5534#5535#0" expanded="true" />
+                <element signature="e#5561#5562#0" expanded="true" />
+                <element signature="e#5588#5589#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="SearchStudentDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Search/SearchStudentDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="34" selection-start="437" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+            <state line="18" column="34" selection-start="437" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1173">
               <folding />
             </state>
           </provider>
@@ -112,9 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/Search/SearchDateComponent.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="42" column="20" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="918">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,11 +120,8 @@
       <file leaf-file-name="AddStudentDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="45" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1343">
-              <folding>
-                <element signature="e#2077#2345#0" expanded="true" />
-                <element signature="e#2334#2335#0" expanded="true" />
-              </folding>
+            <state line="76" column="70" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1377">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,11 +129,16 @@
       <file leaf-file-name="MainView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="17" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.0" vertical-offset="1354" max-vertical-offset="2040">
+            <state line="176" column="0" selection-start="6089" selection-end="6089" vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="2890">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3610#3909#0" expanded="true" />
-                <element signature="e#3898#3899#0" expanded="true" />
+                <element signature="e#4841#5228#0" expanded="true" />
+                <element signature="e#5217#5218#0" expanded="true" />
+                <element signature="e#5271#5658#0" expanded="true" />
+                <element signature="e#5647#5648#0" expanded="true" />
+                <element signature="e#5699#6086#0" expanded="true" />
+                <element signature="e#6075#6076#0" expanded="true" />
+                <element signature="e#6129#6517#0" expanded="true" />
+                <element signature="e#6506#6507#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,12 +147,8 @@
       <file leaf-file-name="Settings.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SettingsMenu/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="53" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="1190">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1813#2241#0" expanded="true" />
-                <element signature="e#2230#2231#0" expanded="true" />
-              </folding>
+            <state line="67" column="57" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1190">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,7 +156,7 @@
       <file leaf-file-name="EnterDateComponent.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+            <state line="38" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -201,8 +197,8 @@
         <option value="$PROJECT_DIR$/src/Model/StudentList.java" />
         <option value="$PROJECT_DIR$/src/SettingsMenu/Settings.java" />
         <option value="$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java" />
-        <option value="$PROJECT_DIR$/src/MainPackge/MainView.java" />
         <option value="$PROJECT_DIR$/src/MainPackge/Controller.java" />
+        <option value="$PROJECT_DIR$/src/MainPackge/MainView.java" />
       </list>
     </option>
   </component>
@@ -240,7 +236,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,12 +304,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="studentsTable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StudentsTable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="MainPackge" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -634,11 +648,12 @@
       <workItem from="1428402759089" duration="15603000" />
       <workItem from="1428516369435" duration="870000" />
       <workItem from="1428602107849" duration="12749000" />
+      <workItem from="1428642882038" duration="9062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79729000" />
+    <option name="totallyTimeSpent" value="88791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
@@ -663,7 +678,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24866879" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24653888" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15598291" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -704,10 +719,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="26" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
           <folding>
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#4722#4723#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
+            <element signature="e#5500#5501#0" expanded="true" />
+            <element signature="e#5534#5535#0" expanded="true" />
+            <element signature="e#5561#5562#0" expanded="true" />
+            <element signature="e#5588#5589#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,10 +730,7 @@
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="2240" selection-end="2240" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="1445">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -726,9 +738,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="23" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1530">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -765,10 +782,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="26" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="646">
           <folding>
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#4722#4723#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
+            <element signature="e#5500#5501#0" expanded="true" />
+            <element signature="e#5534#5535#0" expanded="true" />
+            <element signature="e#5561#5562#0" expanded="true" />
+            <element signature="e#5588#5589#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,10 +793,7 @@
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="2240" selection-end="2240" vertical-scroll-proportion="0.0" vertical-offset="829" max-vertical-offset="1445">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -787,9 +801,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="23" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1530">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -826,10 +845,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
           <folding>
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#4722#4723#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
+            <element signature="e#5500#5501#0" expanded="true" />
+            <element signature="e#5534#5535#0" expanded="true" />
+            <element signature="e#5561#5562#0" expanded="true" />
+            <element signature="e#5588#5589#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -838,9 +857,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1462">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,10 +872,7 @@
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1309">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -880,10 +901,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="306">
           <folding>
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#4722#4723#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
+            <element signature="e#5500#5501#0" expanded="true" />
+            <element signature="e#5534#5535#0" expanded="true" />
+            <element signature="e#5561#5562#0" expanded="true" />
+            <element signature="e#5588#5589#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -892,9 +913,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="8" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1462">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,10 +928,7 @@
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="1977" selection-end="1977" vertical-scroll-proportion="0.0" vertical-offset="609" max-vertical-offset="1309">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -920,9 +943,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="40" selection-start="2173" selection-end="2173" vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1411">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -930,10 +958,7 @@
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="484" max-vertical-offset="1054">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -948,9 +973,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="46" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="1292">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -958,10 +988,7 @@
     <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="408">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -976,9 +1003,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="41" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0" vertical-offset="824" max-vertical-offset="1428">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -994,9 +1026,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="20" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1224">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1012,9 +1049,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="28" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="918">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,25 +1095,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Student.java">
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchDateComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+        <state line="42" column="20" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchDateComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="20" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="918">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="38" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="5" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1411">
+        <state line="33" column="25" selection-start="680" selection-end="680" vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="850">
           <folding />
         </state>
       </provider>
@@ -1083,53 +1123,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SettingsMenu/Settings.java">
+    <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="53" selection-start="2139" selection-end="2139" vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1190">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1813#2241#0" expanded="true" />
-            <element signature="e#2230#2231#0" expanded="true" />
-          </folding>
+        <state line="76" column="70" selection-start="2636" selection-end="2636" vertical-scroll-proportion="0.0" vertical-offset="725" max-vertical-offset="1377">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddStudent/EnterDateComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/SettingsMenu/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+        <state line="67" column="57" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.0" vertical-offset="642" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/StudentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="41" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0" vertical-offset="791" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="17" selection-start="3846" selection-end="3846" vertical-scroll-proportion="0.0" vertical-offset="1354" max-vertical-offset="2040">
+        <state line="176" column="0" selection-start="6089" selection-end="6089" vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="2890">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3610#3909#0" expanded="true" />
-            <element signature="e#3898#3899#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddStudent/AddStudentDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="45" selection-start="2321" selection-end="2321" vertical-scroll-proportion="0.0" vertical-offset="708" max-vertical-offset="1343">
-          <folding>
-            <element signature="e#2077#2345#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#4841#5228#0" expanded="true" />
+            <element signature="e#5217#5218#0" expanded="true" />
+            <element signature="e#5271#5658#0" expanded="true" />
+            <element signature="e#5647#5648#0" expanded="true" />
+            <element signature="e#5699#6086#0" expanded="true" />
+            <element signature="e#6075#6076#0" expanded="true" />
+            <element signature="e#6129#6517#0" expanded="true" />
+            <element signature="e#6506#6507#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainPackge/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="11" selection-start="4390" selection-end="4390" vertical-scroll-proportion="2.2831714" vertical-offset="408" max-vertical-offset="2431">
+        <state line="181" column="27" selection-start="5730" selection-end="5730" vertical-scroll-proportion="0.7152104" vertical-offset="2295" max-vertical-offset="2924">
           <folding>
-            <element signature="e#1306#1307#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#4722#4723#0" expanded="true" />
-            <element signature="e#4759#4760#0" expanded="true" />
+            <element signature="e#5500#5501#0" expanded="true" />
+            <element signature="e#5534#5535#0" expanded="true" />
+            <element signature="e#5561#5562#0" expanded="true" />
+            <element signature="e#5588#5589#0" expanded="true" />
           </folding>
         </state>
       </provider>

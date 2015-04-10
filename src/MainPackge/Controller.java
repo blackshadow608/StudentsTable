@@ -33,12 +33,13 @@ public class Controller {
         this.dateFormat = "dd" + separator + "MM" + separator + "y";
         this.page = 1;
         this.currentPage = 1;
-        this.numOfRows = 37;
+        this.numOfRows = 38;
         this.studentList = studentList;
         model.addColumn("ФИО");
         model.addColumn("Дата рождения");
         model.addColumn("Дата поступления");
         model.addColumn("Дата окончания");
+
     }
     public DefaultTableModel getModel(){
         return model;
@@ -105,24 +106,24 @@ public class Controller {
         ArrayList<Date> enterDates = studentList.getEnterDate();
         ArrayList<Date> finishDates = studentList.getFinishDate();
 
-//        model = null;
-//        model = new DefaultTableModel();
-//        model.addColumn("ФИО");
-//        model.addColumn("Дата рождения");
-//        model.addColumn("Дата поступления");
-//        model.addColumn("Дата окончания");
-        for (int rowCount = 0; rowCount < model.getRowCount(); rowCount++){
-            model.removeRow(rowCount);
-        }
-        SimpleDateFormat format1 = new SimpleDateFormat(dateFormat);
-//        int rows;
-//        rows = (currentPage - 1) * (numOfRows);
-//        int numOfLastRow;
-//        numOfLastRow = rows + numOfRows-1;
-//        if(names.length < numOfLastRow) {
-//            numOfLastRow = names.length;
+        model = null;
+        model = new DefaultTableModel();
+        model.addColumn("ФИО");
+        model.addColumn("Дата рождения");
+        model.addColumn("Дата поступления");
+        model.addColumn("Дата окончания");
+//        for (int rowCount = 0; rowCount < model.getRowCount(); rowCount++){
+//            model.removeRow(rowCount);
 //        }
-        for (int row = 0 ; row < names.length; row++){
+        SimpleDateFormat format1 = new SimpleDateFormat(dateFormat);
+        int rows;
+        rows = (currentPage - 1) * (numOfRows);
+        int numOfLastRow;
+       numOfLastRow = rows + numOfRows;
+       if(names.length < numOfLastRow) {
+           numOfLastRow = names.length;
+       }
+        for (int row = rows ; row < numOfLastRow; row++){
 
             String[] rowData = {names[row].toString(), format1.format(birthdays.get(row)),
                     format1.format(enterDates.get(row)), format1.format(finishDates.get(row))};
@@ -148,6 +149,38 @@ public class Controller {
 //        if(!settings[2].equals("")) {
 //            this.dateFormat = settings[2];
 //        }
+    }
+
+    public void nextPage(){
+        page = (studentList.size() / numOfRows) + 1;
+        if(currentPage < page)
+        this.currentPage++;
+        updateModel();
+    }
+
+    public void prevPage(){
+        page = (studentList.size() / numOfRows) + 1;
+        if(currentPage > 1)
+            this.currentPage--;
+        updateModel();
+    }
+
+    public int getCurrentPage(){
+        return currentPage;
+    }
+
+    public int getPage(){
+        return page;
+    }
+
+    public void firstPage(){
+        currentPage = 1;
+        updateModel();
+    }
+
+    public void lastPage(){
+        currentPage = page;
+        updateModel();
     }
 
 }

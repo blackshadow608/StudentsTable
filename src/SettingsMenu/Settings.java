@@ -16,8 +16,12 @@ public class Settings extends JDialog {
     private JTextField separator = new JTextField(3);
     private JButton applyButton = new JButton("Применить");
     private Controller controller;
+    private JTable table;
+    private JLabel currentPage;
 
-    public Settings(Controller controller){
+    public Settings(Controller controller, JTable table, JLabel currentPage){
+        this.currentPage = currentPage;
+        this.table = table;
         this.controller = controller;
         Box rowBox = Box.createHorizontalBox();
         rowBox.add(new JLabel("Количество записей на странице:"));
@@ -45,6 +49,7 @@ public class Settings extends JDialog {
         mainBox.add(applyButton);
 
         add(mainBox);
+        initListeners();
         setResizable(false);
         pack();
     }
@@ -58,6 +63,9 @@ public class Settings extends JDialog {
 //                settings[1] = separator.getText();
 //                settings[2] = dateFormat.getText();
                 controller.setSetting(Integer.parseInt(numOfRows.getText()));
+                table.setModel(controller.getModel());
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
             }
         });
     }

@@ -19,9 +19,11 @@ public class AddStudentDialog extends JDialog {
     private EnterDateComponent dateFinish;
     private Controller controller;
     private JTable table;
+    private JLabel currentPage;
 
 
-    public AddStudentDialog(Controller control,JTable table){
+    public AddStudentDialog(Controller control,JTable table, JLabel currentPage){
+        this.currentPage = currentPage;
         this.table = table;
         this.controller = control;
         name = new JTextField(30);
@@ -70,6 +72,9 @@ public class AddStudentDialog extends JDialog {
             public void actionPerformed(ActionEvent e) {
                controller.addNewStudent(name.getText(), birthday.getDate(), dateEnter.getDate(),
                        dateFinish.getDate());
+                table.setModel(controller.getModel());
+                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
+                        " / " + String.valueOf(controller.getPage()));
             }
         });
 
