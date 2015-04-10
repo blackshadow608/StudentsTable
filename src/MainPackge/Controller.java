@@ -27,6 +27,8 @@ public class Controller {
     private int page;
     private int currentPage;
     private int numOfRows;
+    private ArrayList<Integer> numbersOfSearchElements;
+    private DefaultTableModel modelOfSearchTable;
 
     public Controller(StudentList studentList){
         this.separator = ":";
@@ -150,6 +152,124 @@ public class Controller {
             this.dateFormat = settings[2];
         }
         updateModel();
+    }
+
+    public void findWithNameAndBDay(int numberSearch, String name, int date){
+        Object [] names = studentList.getNames();
+        numbersOfSearchElements = new ArrayList<Integer>();
+        int birthdaySearch = 1;
+        int enterDateSearch = 2;
+        int finishDateSearch = 3;
+        ArrayList<Date> birthdays = studentList.getBirthdays();
+        ArrayList<Date> enterDates = studentList.getEnterDate();
+        ArrayList<Date> finishDates = studentList.getFinishDate();
+        if(numberSearch == birthdaySearch){
+            for(int currentStudent = 0; currentStudent < birthdays.size(); currentStudent++){
+                if(date == birthdays.get(currentStudent).getDate() && name.equals(names[currentStudent])){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+        if(numberSearch == enterDateSearch){
+            for(int currentStudent = 0; currentStudent < enterDates.size(); currentStudent++){
+                if(date == enterDates.get(currentStudent).getDate() && name.equals(names[currentStudent])){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+        if(numberSearch == finishDateSearch){
+            for(int currentStudent = 0; currentStudent < finishDates.size(); currentStudent++){
+                if(date == finishDates.get(currentStudent).getDate() && name.equals(names[currentStudent])){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+
+    }
+
+    public void findStudentWithDate(int numberSearch, int date, int month){
+        numbersOfSearchElements = new ArrayList<Integer>();
+        int birthdaySearch = 1;
+        int enterDateSearch = 2;
+        int finishDateSearch = 3;
+        ArrayList<Date> birthdays = studentList.getBirthdays();
+        ArrayList<Date> enterDates = studentList.getEnterDate();
+        ArrayList<Date> finishDates = studentList.getFinishDate();
+        if(numberSearch == birthdaySearch){
+            for(int currentStudent = 0; currentStudent < birthdays.size(); currentStudent++){
+                if(date == birthdays.get(currentStudent).getDate() && month == birthdays.get(currentStudent).getMonth()){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+        if(numberSearch == enterDateSearch){
+            for(int currentStudent = 0; currentStudent < enterDates.size(); currentStudent++){
+                if(date == enterDates.get(currentStudent).getDate() && month == enterDates.get(currentStudent).getMonth()){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+        if(numberSearch == finishDateSearch){
+            for(int currentStudent = 0; currentStudent < finishDates.size(); currentStudent++){
+                if(date == finishDates.get(currentStudent).getDate() && month == finishDates.get(currentStudent).getMonth()){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+    }
+    public void findStudentWithDate(int numberSearch, int date, int yearFrom, int yearTo){
+        numbersOfSearchElements = new ArrayList<Integer>();
+        int birthdaySearch = 1;
+        int enterDateSearch = 2;
+        int finishDateSearch = 3;
+        ArrayList<Date> birthdays = studentList.getBirthdays();
+        ArrayList<Date> enterDates = studentList.getEnterDate();
+        ArrayList<Date> finishDates = studentList.getFinishDate();
+        if(numberSearch == birthdaySearch){
+            for(int currentStudent = 0; currentStudent < birthdays.size(); currentStudent++){
+                if(date == birthdays.get(currentStudent).getDate() && yearFrom <= birthdays.get(currentStudent).getYear()
+                        && birthdays.get(currentStudent).getYear() >= yearTo){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+        if(numberSearch == enterDateSearch){
+            for(int currentStudent = 0; currentStudent < enterDates.size(); currentStudent++){
+                if(date == enterDates.get(currentStudent).getDate() && yearFrom <=  enterDates.get(currentStudent).getYear()
+                        &&  enterDates.get(currentStudent).getYear() >= yearTo){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+        if(numberSearch == finishDateSearch){
+            for(int currentStudent = 0; currentStudent < finishDates.size(); currentStudent++){
+                if(date == finishDates.get(currentStudent).getDate() && yearFrom <= finishDates.get(currentStudent).getYear()
+                        && finishDates.get(currentStudent).getYear() >= yearTo){
+                    numbersOfSearchElements.add(currentStudent);
+                }
+            }
+        }
+    }
+
+    public DefaultTableModel  getModelOfSearchTable(){
+        modelOfSearchTable = new DefaultTableModel();
+        modelOfSearchTable.addColumn("ФИО");
+        modelOfSearchTable.addColumn("Дата рождения");
+        modelOfSearchTable.addColumn("Дата поступления");
+        modelOfSearchTable.addColumn("Дата окончания");
+        Object [] names = studentList.getNames();
+        ArrayList<Date> birthdays = studentList.getBirthdays();
+        ArrayList<Date> enterDates = studentList.getEnterDate();
+        ArrayList<Date> finishDates = studentList.getFinishDate();
+        SimpleDateFormat format1 = new SimpleDateFormat(dateFormat);
+        for (Integer numbersOfSearchElement : numbersOfSearchElements) {
+            String[] rowData = {names[numbersOfSearchElement].toString(),
+                    format1.format(birthdays.get(numbersOfSearchElement)),
+                    format1.format(enterDates.get(numbersOfSearchElement)),
+                    format1.format(finishDates.get(numbersOfSearchElement))};
+            modelOfSearchTable.addRow(rowData);
+        }
+        return modelOfSearchTable;
     }
 
     public void nextPage(){

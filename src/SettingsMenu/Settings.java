@@ -71,6 +71,7 @@ public class Settings extends JDialog {
                         " / " + String.valueOf(controller.getPage()));
                 numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
                         "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
+                setVisible(false);
             }
         });
     }

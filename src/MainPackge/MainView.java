@@ -27,7 +27,7 @@ public class MainView {
     private JMenuItem settingsMenu = new JMenuItem("Настройки таблицы");
     private JMenuItem find = new JMenuItem("Найти студента");
     private JLabel currentPage = new JLabel("Страница : ");
-    private JLabel numOfRecords = new JLabel("asdasd");
+    private JLabel numOfRecords = new JLabel();
     private Controller controller;
     private DefaultTableModel model;
 

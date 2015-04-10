@@ -40,9 +40,16 @@ public class SearchDateComponent extends JPanel {
         box.add(Box.createHorizontalStrut(5));
         add(box);
     }
-    public Date getDate(){
-        Date date = new Date(Integer.parseInt(yearFieldFrom.getText()) - 1900, Integer.parseInt(monthField.getText()) - 1,
-                Integer.parseInt(dayField.getText()));
-        return date;
+    public int getDate(){
+        return Integer.parseInt(dayField.getText());
+    }
+    public int getMonth(){
+        return Integer.parseInt(monthField.getText());
+    }
+    public int getYearFrom(){
+        return Integer.parseInt(yearFieldFrom.getText());
+    }
+    public int getYearTo(){
+        return Integer.parseInt(yearFieldTo.getText());
     }
 }

@@ -1,5 +1,6 @@
 package Search;
 
+
 import AddStudent.EnterDateComponent;
 import MainPackge.Controller;
 
@@ -28,7 +29,7 @@ public class SearchStudentDialog extends JDialog {
         birthday = new SearchDateComponent();
         dateEnter = new SearchDateComponent();
         dateFinish = new SearchDateComponent();
-        addButton = new JButton("Добавить");
+        addButton = new JButton("Найти");
         setResizable(false);
 
         Box boxMain = Box.createHorizontalBox();
@@ -45,7 +46,7 @@ public class SearchStudentDialog extends JDialog {
         dataBox.add(Box.createVerticalStrut(15));
         dataBox.add(name);
         dataBox.add(Box.createVerticalStrut(10));
-        labelBox.add(new JLabel("Дата Рождения"));
+        labelBox.add(new JLabel("Дата роджения"));
         labelBox.add(Box.createVerticalStrut(20));
         dataBox.add(birthday);
         dataBox.add(Box.createVerticalStrut(10));
