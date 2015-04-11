@@ -75,11 +75,8 @@ public class AddStudentDialog extends JDialog {
             public void actionPerformed(ActionEvent e) {
                controller.addNewStudent(name.getText(), birthday.getDate(), dateEnter.getDate(),
                        dateFinish.getDate());
-                table.setModel(controller.getModel());
-                currentPage.setText("Страница: " + String.valueOf(controller.getCurrentPage()) +
-                        " / " + String.valueOf(controller.getPage()));
-                numOfRecords.setText("Всего записей: " + String.valueOf(controller.numOfAllStudents()) +
-                        "   Записей на странице: " + String.valueOf(controller.numOfRecordsOnPage()));
+
+
             }
         });
 

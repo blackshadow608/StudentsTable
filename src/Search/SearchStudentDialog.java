@@ -1,9 +1,7 @@
 package Search;
 
 
-import AddStudent.EnterDateComponent;
 import MainPackge.Controller;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
@@ -31,16 +29,11 @@ public class SearchStudentDialog extends JDialog {
         dateFinish = new SearchDateComponent();
         addButton = new JButton("Найти");
         setResizable(false);
-
         Box boxMain = Box.createHorizontalBox();
         Box labelBox = Box.createVerticalBox();
         Box dataBox = Box.createVerticalBox();
-
-
         boxMain.add(labelBox);
         boxMain.add(dataBox);
-
-
         labelBox.add(new JLabel("ФИО"));
         labelBox.add(Box.createVerticalStrut(20));
         dataBox.add(Box.createVerticalStrut(15));
@@ -58,9 +51,7 @@ public class SearchStudentDialog extends JDialog {
         labelBox.add(Box.createVerticalStrut(20));
         dataBox.add(dateFinish);
         dataBox.add(Box.createVerticalStrut(0));
-
         dataBox.add(addButton);
-
         add(new JPanel().add(boxMain));
         //initListeners();
         pack();
