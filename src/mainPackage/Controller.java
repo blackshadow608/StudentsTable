@@ -1,8 +1,8 @@
-package MainPackge; /**
+package mainPackage; /**
  * Created by USER on 06.04.15.
  */
-import Model.Student;
-import Model.StudentList;
+import model.Student;
+import model.StudentList;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
 

@@ -1,10 +1,9 @@
-package AddStudent;
+package addStudent;
 
-import MainPackge.Controller;
-import PageView.PageViewComponent;
+import mainPackage.Controller;
+import pageView.PageViewComponent;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

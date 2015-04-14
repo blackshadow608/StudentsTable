@@ -1,9 +1,8 @@
-package Search;
+package search;
 
 
-import MainPackge.Controller;
-import PageView.PageViewComponent;
-import javafx.scene.control.RadioButton;
+import mainPackage.Controller;
+import pageView.PageViewComponent;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -18,20 +17,12 @@ public class SearchStudentDialog extends JDialog {
     private JTextField firstName = new JTextField(20);
     private JTextField lastName = new JTextField(20);
     private JTextField secondName = new JTextField(20);
-    private JButton nextPage;
-    private JButton previousPage;
-    private JButton toFirstsPage;
-    private JButton toLastPage;
-    private JButton applyPages;
     private JButton deleteButton;
-    private JTextField numOfRows = new JTextField(3);
 
     private JButton findButton;
     private SearchDateComponent birthday;
     private SearchDateComponent dateEnter;
     private SearchDateComponent dateFinish;
-    private DefaultTableModel model ;
-    private JTable table;
     private Controller controller;
     private PageViewComponent pageViewComponent;
     private JRadioButton nameBDay = new JRadioButton("ФИО + день рждения");
@@ -48,8 +39,7 @@ public class SearchStudentDialog extends JDialog {
 
     public SearchStudentDialog(Controller control){
         this.setTitle("Поиск");
-        model = new DefaultTableModel();
-
+        this.controller = control;
         buttonGroup.add(nameBDay);
         buttonGroup.add(nameEnDay);
         buttonGroup.add(nameFinDay);
@@ -71,20 +61,10 @@ public class SearchStudentDialog extends JDialog {
         radioButtonBox.add(EnDayYear);
         radioButtonBox.add(FinDayYear);
         this.controller = control;
-        model = controller.getModel();
-        table = new JTable(model);
-        pageViewComponent = new PageViewComponent(model, table, controller , 1);
-        JLabel currentPage = new JLabel("Страница : ");
-        JLabel numOfRecords = new JLabel("Всего записей: ");
+        pageViewComponent = new PageViewComponent(controller, 1);
 
-        previousPage = new JButton("<");
-        toFirstsPage = new JButton("<<");
-        nextPage = new JButton(">");
-        toLastPage = new JButton(">>");
-        applyPages = new JButton("применить");
         deleteButton = new JButton("удалить");
 
-        pageViewComponent.getLabels(numOfRecords,currentPage);
         birthday = new SearchDateComponent();
         dateEnter = new SearchDateComponent();
         dateFinish = new SearchDateComponent();
@@ -124,41 +104,11 @@ public class SearchStudentDialog extends JDialog {
         fieldNameBox.add(firstName);
         fieldNameBox.add(Box.createVerticalStrut(10));
         fieldNameBox.add(secondName);
-
-        Box box = Box.createVerticalBox();
-
-        box.add(new JScrollPane(table));
-        JPanel buttonsPanel = new JPanel();
-        Box numOfPagesBox = Box.createHorizontalBox();
-        Box buttonBox = Box.createHorizontalBox();
-        buttonBox.add(numOfRecords);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonsPanel.add(buttonBox);
-        buttonBox.add(toFirstsPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(previousPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(currentPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(nextPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(toLastPage);
-
-        JPanel panelRows = new JPanel();
-        panelRows.add(numOfPagesBox);
         birthday.setMainLabel("Дата рождения ");
         dateEnter.setMainLabel("Дата поступления ");
         dateFinish.setMainLabel("Дата окончания ");
-        numOfPagesBox.add(new JLabel("Записей на странице: "));
-        numOfPagesBox.add(numOfRows);
-        numOfRows.setText("10");
-        numOfPagesBox.add(applyPages);
-        buttonBox.add(panelRows);
-        box.add(buttonsPanel);
-       // boxMain.add(new JScrollPane(table));
-
         greatestBox.add(panel);
-        greatestBox.add(box);
+        greatestBox.add(pageViewComponent);
         greatestBox.add(deleteButton);
         add(greatestBox);
 

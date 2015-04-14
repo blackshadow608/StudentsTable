@@ -1,8 +1,8 @@
-package MainPackge;
+package mainPackage;
 
-import AddStudent.AddStudentDialog;
-import PageView.PageViewComponent;
-import Search.SearchStudentDialog;
+import addStudent.AddStudentDialog;
+import pageView.PageViewComponent;
+import search.SearchStudentDialog;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -29,7 +29,7 @@ public class MainView {
     private JTextField numOfRows = new JTextField(3);
     private Controller controller;
     private PageViewComponent pageComponent;
-    private DefaultTableModel model;
+
 
     MainView(Controller controller){
         this.controller = controller;
@@ -49,39 +49,14 @@ public class MainView {
         fileMenu.add(saveFile);
         searchMenu.add(find);
         fileMenu.add(addStudent);
-        model = controller.getModel();
-        table = new JTable(model);
-        pageComponent = new PageViewComponent(model, table, controller , 0);
+        pageComponent = new PageViewComponent(controller , 0);
         pageComponent.getLabels(numOfRecords,currentPage);
-        pageComponent.updateLabels();
+      //  pageComponent.updateLabels();
         Box box = Box.createVerticalBox();
 
-        box.add(new JScrollPane(table));
-        JPanel buttonsPanel = new JPanel();
-        Box numOfPagesBox = Box.createHorizontalBox();
-        Box buttonBox = Box.createHorizontalBox();
-        buttonBox.add(numOfRecords);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonsPanel.add(buttonBox);
-        buttonBox.add(toFirstsPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(previousPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(currentPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(nextPage);
-        buttonBox.add(Box.createHorizontalStrut(5));
-        buttonBox.add(toLastPage);
+        box.add(pageComponent);
 
-        JPanel panelRows = new JPanel();
-        panelRows.add(numOfPagesBox);
 
-        numOfPagesBox.add(new JLabel("Записей на странице: "));
-        numOfPagesBox.add(numOfRows);
-        numOfRows.setText("10");
-        numOfPagesBox.add(applyPages);
-        buttonBox.add(panelRows);
-        box.add(buttonsPanel);
         mainFrame.setTitle("Таблица студентов");
         mainFrame.setJMenuBar(menuBar);
         mainFrame.add(box);
@@ -113,7 +88,7 @@ public class MainView {
             public void actionPerformed(ActionEvent e) {
                 controller.Open();
                 pageComponent.updateModel();
-                pageComponent.updateLabels();
+                //pageComponent.updateLabels();
             }
         });
 
@@ -126,39 +101,6 @@ public class MainView {
         });
 
 
-        nextPage.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pageComponent.nextPage();
-            }
-        });
 
-        previousPage.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-               pageComponent.prevPage();
-            }
-        });
-
-        toLastPage.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-               pageComponent.lastPage();
-            }
-        });
-
-        toFirstsPage.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pageComponent.firstPage();
-            }
-        });
-
-        applyPages.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                pageComponent.setNumOfRecords(Integer.parseInt(numOfRows.getText()));
-            }
-        });
     }
 }

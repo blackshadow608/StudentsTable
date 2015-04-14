@@ -1,11 +1,13 @@
-package PageView;
+package pageView;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by USER on 14.04.15.
  */
-public class ButtonsPanel extends JComponent {
+public class ButtonsPanel extends JPanel {
     private JButton nextPage;
     private JButton previousPage;
     private JButton toFirstsPage;
@@ -14,13 +16,22 @@ public class ButtonsPanel extends JComponent {
     private JLabel currentPage = new JLabel("Страница : ");
     private JLabel numOfRecords = new JLabel();
     private JTextField numOfRows = new JTextField(3);
+    public PageViewComponent pageComponent;
+    private int pages;
+    private int records;
+    private int current;
 
-    public ButtonsPanel(){
+    public ButtonsPanel(PageViewComponent pageView){
+        pages = 1;
+        records =15;
+        current = 1;
+        this.pageComponent = pageView;
         previousPage = new JButton("<");
         toFirstsPage = new JButton("<<");
         nextPage = new JButton(">");
         toLastPage = new JButton(">>");
         applyPages = new JButton("применить");
+        JPanel buttonsPanel = new JPanel();
         Box numOfPagesBox = Box.createHorizontalBox();
         Box buttonBox = Box.createHorizontalBox();
         buttonBox.add(numOfRecords);
@@ -44,6 +55,56 @@ public class ButtonsPanel extends JComponent {
         numOfRows.setText("10");
         numOfPagesBox.add(applyPages);
         buttonBox.add(panelRows);
+        add(buttonBox);
+        initListeners();
+    }
+
+    private void initListeners(){
+        nextPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pageComponent.nextPage();
+            }
+        });
+
+        previousPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pageComponent.prevPage();
+            }
+        });
+
+        toLastPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pageComponent.lastPage();
+            }
+        });
+
+        toFirstsPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pageComponent.firstPage();
+            }
+        });
+
+        applyPages.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pageComponent.setNumOfRecords(Integer.parseInt(numOfRows.getText()));
+            }
+        });
+    }
+
+    public void updateLabels(){
+        numOfRecords.setText("Страница: " + String.valueOf(currentPage) +
+                " / " + String.valueOf(pages));
+        numOfRows.setText("Всего записей: " + String.valueOf(records));
+    }
+    public void getPagesAndRecords(int pages, int records, int currentPage){
+        this.pages = pages;
+        this.records = records;
+        this.current = currentPage;
     }
 
 }

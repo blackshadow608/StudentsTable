@@ -1,11 +1,6 @@
-package Search;
-
-import MainPackge.Controller;
-import PageView.PageViewComponent;
+package search;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.util.Date;
 
 /**
  * Created by USER on 08.04.15.

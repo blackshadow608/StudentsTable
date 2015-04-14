@@ -1,7 +1,7 @@
-package MainPackge;
-import Model.StudentList;
+package mainPackage;
+import model.StudentList;
 
-//import MainPackge.MainView;
+//import mainPackge.MainView;
 
 /**
  * Created by USER on 30.03.15.
