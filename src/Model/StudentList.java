@@ -2,21 +2,21 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by USER on 05.04.15.
  */
 public class StudentList {
-    private ArrayList<Student> students;
+    private List<Student> students;
 
     public StudentList(){
         students = new ArrayList<Student>();
     }
 
-    public void addStudent (String name, Date birthday, Date enterDate, Date finishDate){
+    public void addStudent (String firstName,String secondName, String lastName, Date birthday, Date enterDate, Date finishDate){
         Student newStudent = new Student();
-        String [] names = name.split("\\s+");
-        newStudent.setName(names[0], names[1], names [2]);
+        newStudent.setName(lastName, firstName, secondName);
         newStudent.setBirthday(birthday);
         newStudent.setEnterDate(enterDate);
         newStudent.setFinishDate(finishDate);
@@ -24,37 +24,30 @@ public class StudentList {
         students.add(newStudent);
     }
 
-    public void deleteStudent (String name, Date birthday, Date enterDate, Date finishDate){
-        for(int currentStudent = 0; currentStudent < students.size(); currentStudent++){
-            if(name.equals(students.get(currentStudent).getName()) &&
-                    birthday == students.get(currentStudent).getBirthday()&&
-                    enterDate == students.get(currentStudent).getEnterDate() &&
-                    finishDate == students.get(currentStudent).getFinishDate()){
-                students.remove(currentStudent);
+    public void deleteStudent (int index){
+            {
+                students.remove(index);
             }
-        }
     }
-
-    public Object[] getNames(){
+    public List<String> getNames(){
         ArrayList<String> namesList = new ArrayList();
         for (Student student : students) {
             namesList.add(student.getName());
         }
 
-        return namesList.toArray();
+        return namesList;
     }
 
-    public ArrayList getBirthdays(){
-        ArrayList<Date> birthdaysList = new ArrayList();
+    public List getBirthdays(){
+        List<Date> birthdaysList = new ArrayList();
         for (Student student : students) {
             birthdaysList.add(student.getBirthday());
         }
 
-        birthdaysList.toArray();
         return birthdaysList;
     }
 
-    public ArrayList getEnterDate(){
+    public List getEnterDate(){
         ArrayList<Date> enterDateList = new ArrayList();
         for (Student student : students) {
             enterDateList.add(student.getEnterDate());
@@ -63,7 +56,7 @@ public class StudentList {
         return enterDateList;
     }
 
-    public ArrayList getFinishDate(){
+    public List getFinishDate(){
         ArrayList<Date> finishDateList = new ArrayList();
         for (Student student : students) {
             finishDateList.add(student.getFinishDate());

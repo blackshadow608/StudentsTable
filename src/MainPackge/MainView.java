@@ -95,7 +95,7 @@ public class MainView {
         addStudent.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                AddStudentDialog dialog = new AddStudentDialog(controller ,table, currentPage, numOfRecords);
+                AddStudentDialog dialog = new AddStudentDialog(controller, pageComponent);
                 dialog.setVisible(true);
 
             }
@@ -120,7 +120,7 @@ public class MainView {
         find.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SearchStudentDialog dialog = new SearchStudentDialog(controller,model);
+                SearchStudentDialog dialog = new SearchStudentDialog(controller);
                 dialog.setVisible(true);
             }
         });

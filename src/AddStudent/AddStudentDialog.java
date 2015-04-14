@@ -1,6 +1,7 @@
 package AddStudent;
 
 import MainPackge.Controller;
+import PageView.PageViewComponent;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -11,7 +12,9 @@ import java.awt.event.ActionListener;
  * Created by USER on 03.04.15.
  */
 public class AddStudentDialog extends JDialog {
-    private JTextField name;
+    private JTextField firstName = new JTextField(10);
+    private JTextField lastName = new JTextField(10);
+    private JTextField secondName = new JTextField(10);
 
     private JButton addButton;
     private EnterDateComponent birthday;
@@ -21,15 +24,14 @@ public class AddStudentDialog extends JDialog {
     private JTable table;
     private JLabel currentPage;
     private JLabel numOfRecords;
+    private PageViewComponent pageComponent;
 
 
-    public AddStudentDialog(Controller control,JTable table, JLabel currentPage, JLabel numOfRecords){
-        this.numOfRecords = numOfRecords;
+    public AddStudentDialog(Controller control, PageViewComponent pageComponent){
+        this.pageComponent = pageComponent;
         this.setTitle("Добавить студента");
-        this.currentPage = currentPage;
-        this.table = table;
         this.controller = control;
-        name = new JTextField(30);
+
         birthday = new EnterDateComponent();
         dateEnter = new EnterDateComponent();
         dateFinish = new EnterDateComponent();
@@ -45,10 +47,18 @@ public class AddStudentDialog extends JDialog {
         boxMain.add(dataBox);
 
 
-        labelBox.add(new JLabel("ФИО"));
+        labelBox.add(new JLabel("Фамилия"));
         labelBox.add(Box.createVerticalStrut(20));
         dataBox.add(Box.createVerticalStrut(15));
-        dataBox.add(name);
+        dataBox.add(lastName);
+        labelBox.add(new JLabel("Имя"));
+        labelBox.add(Box.createVerticalStrut(20));
+        dataBox.add(Box.createVerticalStrut(15));
+        dataBox.add(firstName);
+        labelBox.add(new JLabel("Отчество"));
+        labelBox.add(Box.createVerticalStrut(20));
+        dataBox.add(Box.createVerticalStrut(15));
+        dataBox.add(secondName);
         dataBox.add(Box.createVerticalStrut(10));
         labelBox.add(new JLabel("Дата Рождения"));
         labelBox.add(Box.createVerticalStrut(20));
@@ -73,9 +83,10 @@ public class AddStudentDialog extends JDialog {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               controller.addNewStudent(name.getText(), birthday.getDate(), dateEnter.getDate(),
+               controller.addNewStudent(firstName.getText(),lastName.getText(),secondName.getText()
+                       , birthday.getDate(), dateEnter.getDate(),
                        dateFinish.getDate());
-
+                pageComponent.updateModel();
 
             }
         });

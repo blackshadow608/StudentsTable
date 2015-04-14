@@ -41,9 +41,15 @@ public class PageViewComponent {
         model.addColumn("Дата поступления");
         model.addColumn("Дата окончания");
         table.setModel(model);
-        List<String[]> rowsValue = controller.getRows(TypeOfRowData);
-        allRecords = rowsValue.size();
-        pages = (rowsValue.size() / numOfRecords) + 1;
+        List<String[]> rowsValue =controller.getRows(TypeOfRowData);
+        if(rowsValue != null){
+            allRecords = rowsValue.size();
+        if(numOfRecords == 1 || numOfRecords == rowsValue.size()){
+            pages = (rowsValue.size() / numOfRecords);
+        }
+        else{
+            pages = (rowsValue.size() / numOfRecords) + 1;
+        }
         int rows;
         rows = (currentPage - 1) * (numOfRecords);
         int numOfLastRow;
@@ -54,6 +60,8 @@ public class PageViewComponent {
         for(int row = rows ; row < numOfLastRow; row++ ){
             model.addRow(rowsValue.get(row));
         }
+        }
+        this.updateLabels();
     }
 
     public void getLabels(JLabel numOfRecords, JLabel numOfPages){
@@ -95,5 +103,6 @@ public class PageViewComponent {
         updateModel();
         updateLabels();
     }
+
 
 }

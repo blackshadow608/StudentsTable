@@ -1,6 +1,10 @@
 package Search;
 
+import MainPackge.Controller;
+import PageView.PageViewComponent;
+
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.util.Date;
 
 /**
@@ -14,11 +18,18 @@ public class SearchDateComponent extends JPanel {
     private JTextField yearFieldFrom = new JTextField(4);
     private JTextField yearFieldTo = new JTextField(4);
     private JLabel yearLabel = new JLabel("Год");
+    private JLabel from = new JLabel("от:");
+    private JLabel to =new JLabel("до:");
+    private JLabel mainLabel = new JLabel("qweqweqwe");
+
 
     public SearchDateComponent(){
-        JPanel panel = new JPanel();
-        Box box = Box.createHorizontalBox();
 
+        JPanel dayPanel = new JPanel();
+        dayPanel.add(dayField);
+        Box box = Box.createHorizontalBox();
+        box.add(mainLabel);
+        box.add(Box.createHorizontalStrut(2));
         box.add(dayLabel);
         box.add(Box.createHorizontalStrut(2));
         box.add(dayField);
@@ -31,10 +42,10 @@ public class SearchDateComponent extends JPanel {
 
         box.add(yearLabel);
         box.add(Box.createHorizontalStrut(2));
-        box.add(new JLabel("от:"));
+        box.add(from);
         box.add(Box.createHorizontalStrut(2));
         box.add(yearFieldFrom);
-        box.add(new JLabel("до:"));
+        box.add(to);
         box.add(Box.createHorizontalStrut(2));
         box.add(yearFieldTo);
         box.add(Box.createHorizontalStrut(5));
@@ -44,12 +55,41 @@ public class SearchDateComponent extends JPanel {
         return Integer.parseInt(dayField.getText());
     }
     public int getMonth(){
-        return Integer.parseInt(monthField.getText());
+        return Integer.parseInt(monthField.getText()) - 1;
     }
     public int getYearFrom(){
-        return Integer.parseInt(yearFieldFrom.getText());
+        return Integer.parseInt(yearFieldFrom.getText()) - 1900;
     }
     public int getYearTo(){
-        return Integer.parseInt(yearFieldTo.getText());
+        return Integer.parseInt(yearFieldTo.getText()) - 1900;
+    }
+    public void setMainLabel(String text){
+        mainLabel.setText(text);
+    }
+    public void setDayVisible(boolean flag){
+        dayField.setVisible(flag);
+        dayLabel.setVisible(flag);
+    }
+    public void setMonthVisible(boolean flag){
+        monthField.setVisible(flag);
+        monthLabel.setVisible(flag);
+    }
+    public void setYearVisible(boolean flag){
+        yearFieldFrom.setVisible(flag);
+        yearFieldTo.setVisible(flag);
+        from.setVisible(flag);
+        to.setVisible(flag);
+        yearLabel.setVisible(flag);
+    }
+    public void setVisibleAll(boolean flag){
+        dayField.setVisible(flag);
+        dayLabel.setVisible(flag);
+        monthField.setVisible(flag);
+        monthLabel.setVisible(flag);
+        yearFieldFrom.setVisible(flag);
+        yearFieldTo.setVisible(flag);
+        from.setVisible(flag);
+        to.setVisible(flag);
+        yearLabel.setVisible(flag);
     }
 }
