@@ -150,7 +150,8 @@ public class Controller {
         List<Date> finishDates = studentList.getFinishDate();
         if(numberSearch == birthdaySearch){
             for(int currentStudent = 0; currentStudent < birthdays.size(); currentStudent++){
-                if(date == birthdays.get(currentStudent).getDate() && name.contains(names.get(currentStudent))){
+                if(date == birthdays.get(currentStudent).getDate()
+                        && name.equals(names.get(currentStudent))){
                     numbersOfSearchElements.add(currentStudent);
                 }
             }

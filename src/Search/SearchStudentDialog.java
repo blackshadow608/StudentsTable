@@ -25,6 +25,7 @@ public class SearchStudentDialog extends JDialog {
     private SearchDateComponent dateFinish;
     private Controller controller;
     private PageViewComponent pageViewComponent;
+    PageViewComponent pageComponentOut;
     private JRadioButton nameBDay = new JRadioButton("ФИО + день рждения");
     private JRadioButton nameEnDay = new JRadioButton("ФИО + день поступления");
     private JRadioButton nameFinDay = new JRadioButton("ФИО + день окончания");
@@ -37,7 +38,8 @@ public class SearchStudentDialog extends JDialog {
     private ButtonGroup buttonGroup = new ButtonGroup();
     private JPanel namePanel = new JPanel();
 
-    public SearchStudentDialog(Controller control){
+    public SearchStudentDialog(Controller control, PageViewComponent pageComponentOut){
+        this.pageComponentOut = pageComponentOut;
         this.setTitle("Поиск");
         this.controller = control;
         buttonGroup.add(nameBDay);
@@ -127,15 +129,15 @@ public class SearchStudentDialog extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(nameBDay.isSelected()){
-                String name = lastName + " " + firstName + " " + secondName;
+                String name = lastName.getText() + " " + firstName.getText() + " " + secondName.getText();
                 controller.findWithNameAndBDay(1,name,birthday.getDate());
                 }
                 if(nameEnDay.isSelected()){
-                    String name = lastName + " " + firstName + " " + secondName;
+                    String name = lastName.getText() + " " + firstName.getText() + " " + secondName.getText();
                     controller.findWithNameAndBDay(2,name,dateEnter.getDate());
                 }
                 if(nameFinDay.isSelected()){
-                    String name = lastName + " " + firstName + " " + secondName;
+                    String name = lastName.getText() + " " + firstName.getText() + " " + secondName.getText();
                     controller.findWithNameAndBDay(3,name,dateFinish.getDate());
                 }
                 if(BDayMonth.isSelected()){
@@ -166,6 +168,7 @@ public class SearchStudentDialog extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 controller.delStudents();
                 pageViewComponent.updateModel();
+                pageComponentOut.updateModel();
             }
         });
         nameBDay.addActionListener(new ActionListener() {

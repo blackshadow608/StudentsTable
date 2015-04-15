@@ -16,48 +16,50 @@ public class PageViewComponent extends JPanel {
     private JLabel numOfPagesLabel;
     private ButtonsPanel buttonsPanel = new ButtonsPanel(this);
     private TableComponent tableComponent;
+    private DefaultTableModel model = new DefaultTableModel();
+    private JTable table = new JTable(model);
 
     public PageViewComponent( Controller controller, int TypeOfRowData){
         currentPage = 1;
         numOfRecords = 10;
-        tableComponent = new TableComponent(controller, currentPage, numOfRecords,TypeOfRowData);
+        tableComponent = new TableComponent(controller, currentPage, numOfRecords,TypeOfRowData, table);
         Box box = Box.createVerticalBox();
-        box.add(tableComponent);
+        box.add(new JScrollPane(table));
         box.add(buttonsPanel);
         add(box);
-        //buttonsPanel.getLabels(numOfRecordsLabel,numOfPagesLabel);
+        updateModel();
     }
 
     public void updateModel(){
         tableComponent.updateModel(currentPage, numOfRecords);
+        buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
+        buttonsPanel.updateLabels();
     }
-
-    public void getLabels(JLabel numOfRecords, JLabel numOfPages){
-        this.numOfRecordsLabel = numOfRecords;
-        this.numOfPagesLabel = numOfPages;
-    }
-
 
     public void nextPage(){
         if(currentPage < tableComponent.getPages())
             currentPage++;
         tableComponent.updateModel(currentPage, numOfRecords);
+        buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
         buttonsPanel.updateLabels();
     }
     public void prevPage(){
         if(currentPage > 1)
             currentPage--;
         tableComponent.updateModel(currentPage, numOfRecords);
+        buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
         buttonsPanel.updateLabels();
     }
     public void firstPage(){
         currentPage = 1;
         tableComponent.updateModel(currentPage, numOfRecords);
+        buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
         buttonsPanel.updateLabels();
     }
     public void lastPage(){
         currentPage = tableComponent.getPages();
         tableComponent.updateModel(currentPage, numOfRecords);
+        buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
         buttonsPanel.updateLabels();
     }
 
@@ -65,6 +67,7 @@ public class PageViewComponent extends JPanel {
         this.numOfRecords = numOfRecords;
         currentPage = 1;
         tableComponent.updateModel(currentPage, numOfRecords);
+        buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
         buttonsPanel.updateLabels();
     }
 

@@ -23,7 +23,7 @@ public class ButtonsPanel extends JPanel {
 
     public ButtonsPanel(PageViewComponent pageView){
         pages = 1;
-        records =15;
+        records = 0;
         current = 1;
         this.pageComponent = pageView;
         previousPage = new JButton("<");
@@ -97,11 +97,11 @@ public class ButtonsPanel extends JPanel {
     }
 
     public void updateLabels(){
-        numOfRecords.setText("Страница: " + String.valueOf(currentPage) +
+         currentPage.setText("Страница: " + String.valueOf(current) +
                 " / " + String.valueOf(pages));
-        numOfRows.setText("Всего записей: " + String.valueOf(records));
+        numOfRecords.setText("Всего записей: " + String.valueOf(records));
     }
-    public void getPagesAndRecords(int pages, int records, int currentPage){
+    public void setPagesAndRecords(int pages, int records, int currentPage){
         this.pages = pages;
         this.records = records;
         this.current = currentPage;

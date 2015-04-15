@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by USER on 14.04.15.
  */
-public class TableComponent extends JPanel {
+public class TableComponent {
     private DefaultTableModel model;
     private JTable table;
     private int currentPage;
@@ -21,18 +21,14 @@ public class TableComponent extends JPanel {
     private Controller controller;
     private int TypeOfRowData;
 
-    public TableComponent(Controller controller, int currentPage, int numOfRecords, int TypeOfRowData){
+    public TableComponent(Controller controller, int currentPage, int numOfRecords, int TypeOfRowData, JTable table){
         this.TypeOfRowData = TypeOfRowData;
-
         model = new DefaultTableModel();
-        table = new JTable(model);
-        //updateModel(pages,currentPage,numOfRecords);
+        this.table = table;
         this.controller = controller;
         this.currentPage = currentPage;
         this.pages = 1;
         this.numOfRecords = numOfRecords;
-        setSize(900,9);
-        add(new JScrollPane(table));
     }
     public void updateModel(int currentPage, int numOfRecords){
         this.currentPage = currentPage;
@@ -71,6 +67,6 @@ public class TableComponent extends JPanel {
         return pages;
     }
     public int getNumOfRecords(){
-        return numOfRecords;
+        return allRecords;
     }
 }
