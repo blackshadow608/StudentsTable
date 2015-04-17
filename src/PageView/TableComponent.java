@@ -44,7 +44,7 @@ public class TableComponent {
         List<String[]> rowsValue = controller.getRows(TypeOfRowData);
         if(rowsValue != null){
             allRecords = rowsValue.size();
-            if(numOfRecords == 1 || numOfRecords == rowsValue.size()){
+            if(rowsValue.size() % numOfRecords== 0){
                 this.pages = (rowsValue.size() / numOfRecords);
             }
             else{

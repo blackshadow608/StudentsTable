@@ -65,6 +65,10 @@ public class StudentList {
         return finishDateList;
     }
 
+    public Student getStudent(int index){
+        return students.get(index);
+    }
+
     public int size(){
         return students.size();
     }
