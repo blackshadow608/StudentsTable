@@ -1,14 +1,18 @@
 package mainPackage;
 
 import addStudent.AddStudentDialog;
+import org.xml.sax.SAXException;
 import pageView.PageViewComponent;
 import search.SearchStudentDialog;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.xml.parsers.ParserConfigurationException;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.text.ParseException;
 
 /**
  * Created by USER on 30.03.15.
@@ -96,14 +100,14 @@ public class MainView {
         openFile.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.Open();
+                    controller.Open();
                 pageComponent.updateModel();
             }
         });
         openButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.Open();
+                    controller.Open();
                 pageComponent.updateModel();
             }
         });
@@ -124,8 +128,5 @@ public class MainView {
                 pageComponent.updateModel();
             }
         });
-
-
-
     }
 }

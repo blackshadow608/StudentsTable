@@ -23,6 +23,9 @@ public class StudentList {
 
         students.add(newStudent);
     }
+    public void addStudent(Student student){
+        students.add(student);
+    }
 
     public void deleteStudent (int index){
             {
@@ -36,33 +39,6 @@ public class StudentList {
         }
 
         return namesList;
-    }
-
-    public List getBirthdays(){
-        List<Date> birthdaysList = new ArrayList();
-        for (Student student : students) {
-            birthdaysList.add(student.getBirthday());
-        }
-
-        return birthdaysList;
-    }
-
-    public List getEnterDate(){
-        ArrayList<Date> enterDateList = new ArrayList();
-        for (Student student : students) {
-            enterDateList.add(student.getEnterDate());
-        }
-
-        return enterDateList;
-    }
-
-    public List getFinishDate(){
-        ArrayList<Date> finishDateList = new ArrayList();
-        for (Student student : students) {
-            finishDateList.add(student.getFinishDate());
-        }
-
-        return finishDateList;
     }
 
     public Student getStudent(int index){

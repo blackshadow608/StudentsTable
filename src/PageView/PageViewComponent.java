@@ -70,6 +70,4 @@ public class PageViewComponent extends JPanel {
         buttonsPanel.setPagesAndRecords(tableComponent.getPages(),tableComponent.getNumOfRecords(),currentPage);
         buttonsPanel.updateLabels();
     }
-
-
 }

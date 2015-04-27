@@ -51,6 +51,7 @@ public class Student {
     public String getName(){
         return  (this.lastName + " " + this.firstName + " " + this.secondName);
     }
-
-
+    public String getFirstName(){return this.firstName;}
+    public String getLastName(){return this.lastName;}
+    public String getSecondName(){return this.secondName;}
 }

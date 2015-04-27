@@ -16,7 +16,7 @@ public class ButtonsPanel extends JPanel {
     private JLabel currentPage = new JLabel("Страница : ");
     private JLabel numOfRecords = new JLabel();
     private JTextField numOfRows = new JTextField(3);
-    public PageViewComponent pageComponent;
+    private PageViewComponent pageComponent;
     private int pages;
     private int records;
     private int current;
@@ -106,5 +106,4 @@ public class ButtonsPanel extends JPanel {
         this.records = records;
         this.current = currentPage;
     }
-
 }

@@ -264,5 +264,4 @@ public class SearchStudentDialog extends JDialog {
             }
         });
     }
-
 }

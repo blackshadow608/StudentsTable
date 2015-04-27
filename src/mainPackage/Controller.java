@@ -5,14 +5,30 @@ import model.Student;
 import model.StudentList;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
+import org.jcp.xml.dsig.internal.dom.Utils;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,7 +57,7 @@ public class Controller {
         return model;
     }
 
-    public void addNewStudent (String firstName,String secondName, String lastName, Date birthday, Date enterDate, Date finishDate){
+    public void addNewStudent (String firstName, String lastName,String secondName, Date birthday, Date enterDate, Date finishDate){
         studentList.addStudent(firstName,secondName,lastName,birthday,enterDate,finishDate);
     }
 
@@ -56,7 +72,7 @@ public class Controller {
 
     public void Save() {
 
-        try {
+//        try {
             //File file = new File("D:/таблица.xml");
             JFileChooser fileChooser = new JFileChooser();
 
@@ -66,17 +82,59 @@ public class Controller {
             fileChooser.addChoosableFileFilter(filter);
             File file;
             file = new File(fileChooser.getSelectedFile().getAbsolutePath());
-            if(filter.accept(file)){
-                XStream xstream = new XStream(new StaxDriver());
-                xstream.alias("student", Student.class);
-                xstream.alias("studentList", StudentList.class);
-                xstream.toXML(studentList, new FileOutputStream(file));
+        if(file == null){file = new File("D:/studentsTable.xml");}
+
+        try {
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+            Document doc = builder.newDocument();
+
+            Element root = doc.createElement("studentList");
+            doc.appendChild(root);
+
+            for (int currentStudent = 0; currentStudent < studentList.size(); currentStudent++) {
+                Student student = studentList.getStudent(currentStudent);
+                Element studentElement = doc.createElement("student");
+                root.appendChild(studentElement);
+
+                createFieldElement(doc, studentElement, "firstName", student.getFirstName());
+                createFieldElement(doc, studentElement, "lastName", student.getLastName());
+                createFieldElement(doc, studentElement, "secondName", student.getSecondName());
+                DateFormat format = new SimpleDateFormat("y-MM-dd");
+                createFieldElement(doc, studentElement, "birthday",format.format(student.getBirthday()));
+                createFieldElement(doc, studentElement, "enterDate", format.format(student.getEnterDate()));
+                createFieldElement(doc, studentElement, "finishDate",format.format(student.getFinishDate()));
             }
-        } catch (IOException e) {
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            DOMSource domSource = new DOMSource(doc);
+            StreamResult result = new StreamResult(file);
+            transformer.transform(domSource, result);
+
+//            if(filter.accept(file)){
+//                XStream xstream = new XStream(new StaxDriver());
+//                xstream.alias("student", Student.class);
+//                xstream.alias("studentList", StudentList.class);
+//                xstream.toXML(studentList, new FileOutputStream(file));
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+    } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
             e.printStackTrace();
         }
     }
-    public void Open(){
+
+    private void createFieldElement(Document doc, Element parent, String field, String value) {
+        Element element = doc.createElement(field);
+        element.setTextContent(value);
+        parent.appendChild(element);
+    }
+
+    public void Open() {
         //("D:/таблица.xml");
         JFileChooser fileChooser = new JFileChooser();
 
@@ -86,7 +144,61 @@ public class Controller {
         fileChooser.addChoosableFileFilter(filter);
         File file;
         file = new File(fileChooser.getSelectedFile().getAbsolutePath());
-        if(filter.accept(file)){
+
+        DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();
+        DocumentBuilder db = null;
+        try {
+            db = dbf.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+        Document doc = null;
+        try {
+            doc = db.parse(file);
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Element root = (Element) doc.getElementsByTagName("studentList").item(0);
+        NodeList  students = root.getElementsByTagName("student");
+
+
+        for(int currentNode = 0;currentNode < students.getLength(); currentNode++){
+            Student student  = new Student();
+
+            Element studentNode = (Element) students.item(currentNode);
+            student.setName(studentNode.getElementsByTagName("lastName").item(0).getTextContent(),
+                    studentNode.getElementsByTagName("firstName").item(0).getTextContent(),
+                    studentNode.getElementsByTagName("secondName").item(0).getTextContent());
+            DateFormat format = new SimpleDateFormat("y-MM-dd");
+            String birthday = studentNode.getElementsByTagName("birthday").item(0).getTextContent();
+            Date date = null;
+            try {
+                date = format.parse(birthday);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            student.setBirthday(date);
+            String enterDate = studentNode.getElementsByTagName("enterDate").item(0).getTextContent();
+            try {
+                date = format.parse(enterDate);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            student.setEnterDate(date);
+            String finishDate = studentNode.getElementsByTagName("finishDate").item(0).getTextContent();
+            try {
+                date = format.parse(finishDate);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            student.setFinishDate(date);
+
+            studentList.addStudent(student);
+        }
+
+       /* if(filter.accept(file)){
             XStream xstream = new XStream(new StaxDriver());
             xstream.alias("student", Student.class);
             xstream.alias("studentList", StudentList.class);
@@ -95,7 +207,7 @@ public class Controller {
 
             // this.updateModel();
         }
-        // this.updateModel();
+        // this.updateModel();*/
     }
 
     public List<String[]> getRows( int TypeOfRows){
@@ -240,7 +352,4 @@ public class Controller {
             }
         }
     }
-
-
-
 }
