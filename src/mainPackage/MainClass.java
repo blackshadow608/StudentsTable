@@ -1,5 +1,7 @@
 package mainPackage;
 import model.StudentList;
+import myFileChooser.ChooseDialog;
+import myFileChooser.PathName;
 
 //import mainPackge.MainView;
 
@@ -12,7 +14,5 @@ public class MainClass {
         StudentList studentList = new StudentList();
         Controller controller = new Controller(studentList);
         MainView view = new MainView(controller);
-
-
     }
 }

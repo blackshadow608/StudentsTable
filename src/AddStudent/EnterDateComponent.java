@@ -15,19 +15,16 @@ public class EnterDateComponent extends JPanel {
     private JLabel yearLabel = new JLabel("Год");
 
     public EnterDateComponent(){
-        JPanel panel = new JPanel();
-        Box box = Box.createHorizontalBox();
 
+        Box box = Box.createHorizontalBox();
         box.add(dayLabel);
         box.add(Box.createHorizontalStrut(2));
         box.add(dayField);
         box.add(Box.createHorizontalStrut(5));
-
         box.add(monthLabel);
         box.add(Box.createHorizontalStrut(2));
         box.add(monthField);
         box.add(Box.createHorizontalStrut(5));
-
         box.add(yearLabel);
         box.add(Box.createHorizontalStrut(2));
         box.add(yearField);

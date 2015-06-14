@@ -1,17 +1,14 @@
 package mainPackage; /**
  * Created by USER on 06.04.15.
  */
+
 import model.Student;
 import model.StudentList;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
-import org.jcp.xml.dsig.internal.dom.Utils;
+import myFileChooser.ChooseDialog;
 import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
-
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
@@ -25,7 +22,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -53,9 +49,6 @@ public class Controller {
         model.addColumn("Дата окончания");
 
     }
-    public DefaultTableModel getModel(){
-        return model;
-    }
 
     public void addNewStudent (String firstName, String lastName,String secondName, Date birthday, Date enterDate, Date finishDate){
         studentList.addStudent(firstName,secondName,lastName,birthday,enterDate,finishDate);
@@ -71,18 +64,18 @@ public class Controller {
     }
 
     public void Save() {
-
-//        try {
-            //File file = new File("D:/таблица.xml");
-            JFileChooser fileChooser = new JFileChooser();
-
-            int returnVal =  fileChooser.showDialog(null, "Сохранить");
-            FileNameExtensionFilter filter;
-            filter = new FileNameExtensionFilter("xml","XML");
-            fileChooser.addChoosableFileFilter(filter);
-            File file;
+        JFileChooser fileChooser = new JFileChooser();
+        int returnVal =  fileChooser.showDialog(null, "Сохранить");
+        FileNameExtensionFilter filter;
+        filter = new FileNameExtensionFilter("xml","XML");
+        fileChooser.addChoosableFileFilter(filter);
+        File file;
+        if(returnVal == 1){
+            file = new File("D:/studentsTable.xml");
+        }else{
             file = new File(fileChooser.getSelectedFile().getAbsolutePath());
-        if(file == null){file = new File("D:/studentsTable.xml");}
+        }
+
 
         try {
             DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -136,15 +129,19 @@ public class Controller {
 
     public void Open() {
         //("D:/таблица.xml");
-        JFileChooser fileChooser = new JFileChooser();
-
-        int returnVal =  fileChooser.showDialog(null, "Открыть");
-        FileNameExtensionFilter filter;
-        filter = new FileNameExtensionFilter("xml","XML");
-        fileChooser.addChoosableFileFilter(filter);
-        File file;
-        file = new File(fileChooser.getSelectedFile().getAbsolutePath());
-
+//        JFileChooser fileChooser = new JFileChooser();
+//
+//        int returnVal =  fileChooser.showDialog(null, "Открыть");
+//        FileNameExtensionFilter filter;
+//        filter = new FileNameExtensionFilter("xml","XML");
+//        fileChooser.addChoosableFileFilter(filter);
+//        if(returnVal == 1) return;
+//        File file;
+//        file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+       // File file = new File("D:/таблица.xml");
+        ChooseDialog dialog = new ChooseDialog();
+        //dialog.setModal(true);
+        File file = dialog.getSelectedFile();
         DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
         try {

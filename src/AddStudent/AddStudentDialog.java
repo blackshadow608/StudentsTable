@@ -2,7 +2,6 @@ package addStudent;
 
 import mainPackage.Controller;
 import pageView.PageViewComponent;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,15 +13,11 @@ public class AddStudentDialog extends JDialog {
     private JTextField firstName = new JTextField(10);
     private JTextField lastName = new JTextField(10);
     private JTextField secondName = new JTextField(10);
-
     private JButton addButton;
     private EnterDateComponent birthday;
     private EnterDateComponent dateEnter;
     private EnterDateComponent dateFinish;
     private Controller controller;
-    private JTable table;
-    private JLabel currentPage;
-    private JLabel numOfRecords;
     private PageViewComponent pageComponent;
 
 
@@ -30,22 +25,16 @@ public class AddStudentDialog extends JDialog {
         this.pageComponent = pageComponent;
         this.setTitle("Добавить студента");
         this.controller = control;
-
         birthday = new EnterDateComponent();
         dateEnter = new EnterDateComponent();
         dateFinish = new EnterDateComponent();
         addButton = new JButton("Добавить");
         setResizable(false);
-
         Box boxMain = Box.createHorizontalBox();
         Box labelBox = Box.createVerticalBox();
         Box dataBox = Box.createVerticalBox();
-
-
         boxMain.add(labelBox);
         boxMain.add(dataBox);
-
-
         labelBox.add(new JLabel("Фамилия"));
         labelBox.add(Box.createVerticalStrut(20));
         dataBox.add(Box.createVerticalStrut(15));
@@ -71,9 +60,7 @@ public class AddStudentDialog extends JDialog {
         labelBox.add(Box.createVerticalStrut(20));
         dataBox.add(dateFinish);
         dataBox.add(Box.createVerticalStrut(0));
-
         dataBox.add(addButton);
-
         add(new JPanel().add(boxMain));
         initListeners();
         pack();

@@ -33,7 +33,7 @@ public class MainView {
 
 
     MainView(Controller controller){
-        JPanel panel = new JPanel();
+
         this.toolBar = new JToolBar();
         toolBar.add(openButton);
         toolBar.add(saveButton);
@@ -52,12 +52,8 @@ public class MainView {
         fileMenu.add(addStudent);
         pageComponent = new PageViewComponent(controller , 0);
         Box box = Box.createVerticalBox();
-      //  box.setLayout(new BorderLayout());
-      // panel.add(box);
-
         box.add(pageComponent);
         box.add(toolBar);
-
         mainFrame.setTitle("Таблица студентов");
         mainFrame.setJMenuBar(menuBar);
         mainFrame.add(box);
