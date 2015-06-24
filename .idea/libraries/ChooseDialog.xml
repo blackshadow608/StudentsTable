@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ChooseDialog">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/src/ChooseDialog.jar!/" />
+    </ANNOTATIONS>
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

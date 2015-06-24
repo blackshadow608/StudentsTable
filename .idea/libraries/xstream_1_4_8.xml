@@ -2,6 +2,7 @@
   <library name="xstream-1.4.8">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../xstream-1.4.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/ChooseDialog.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

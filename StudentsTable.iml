@@ -18,6 +18,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="xstream-1.4.8" level="project" />
+    <orderEntry type="library" name="ChooseDialog" level="project" />
   </component>
 </module>
 

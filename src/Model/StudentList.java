@@ -41,6 +41,10 @@ public class StudentList {
         return namesList;
     }
 
+    public void deleteAll(){
+        students.removeAll(students);
+    }
+
     public Student getStudent(int index){
         return students.get(index);
     }

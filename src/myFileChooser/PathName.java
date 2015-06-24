@@ -17,9 +17,7 @@ public class PathName {
         list = new ArrayList<File>();
         for(int currentItem = 0; currentItem < roots.length; currentItem++){
             list.add(roots[currentItem]);
-           // System.out.println(currentItem);
         }
-
     }
 
 

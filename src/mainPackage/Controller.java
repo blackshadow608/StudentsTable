@@ -4,6 +4,7 @@ package mainPackage; /**
 
 import model.Student;
 import model.StudentList;
+
 import myFileChooser.ChooseDialog;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -63,17 +64,18 @@ public class Controller {
         numbersOfSearchElements = null;
     }
 
-    public void Save() {
-        JFileChooser fileChooser = new JFileChooser();
-        int returnVal =  fileChooser.showDialog(null, "Сохранить");
-        FileNameExtensionFilter filter;
-        filter = new FileNameExtensionFilter("xml","XML");
-        fileChooser.addChoosableFileFilter(filter);
+    public void save() {
+//        JFileChooser fileChooser = new JFileChooser();
+        int returnVal =  0;
+//        FileNameExtensionFilter filter;
+//        filter = new FileNameExtensionFilter("xml","XML");
+//        fileChooser.addChoosableFileFilter(filter);
+        ChooseDialog chooseDialog = new ChooseDialog(null,System.getProperty("user.home"));
         File file;
         if(returnVal == 1){
             file = new File("D:/studentsTable.xml");
         }else{
-            file = new File(fileChooser.getSelectedFile().getAbsolutePath());
+            file = new File(chooseDialog.getSelectedFile().getAbsolutePath());
         }
 
 
@@ -103,15 +105,6 @@ public class Controller {
             StreamResult result = new StreamResult(file);
             transformer.transform(domSource, result);
 
-//            if(filter.accept(file)){
-//                XStream xstream = new XStream(new StaxDriver());
-//                xstream.alias("student", Student.class);
-//                xstream.alias("studentList", StudentList.class);
-//                xstream.toXML(studentList, new FileOutputStream(file));
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
     } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (TransformerConfigurationException e) {
@@ -127,7 +120,7 @@ public class Controller {
         parent.appendChild(element);
     }
 
-    public void Open() {
+    public void open() {
         //("D:/таблица.xml");
 //        JFileChooser fileChooser = new JFileChooser();
 //
@@ -139,8 +132,8 @@ public class Controller {
 //        File file;
 //        file = new File(fileChooser.getSelectedFile().getAbsolutePath());
        // File file = new File("D:/таблица.xml");
-        ChooseDialog dialog = new ChooseDialog();
-        //dialog.setModal(true);
+        studentList.deleteAll();
+        ChooseDialog dialog = new ChooseDialog(new String[]{"xml"},"d:/Универ");
         File file = dialog.getSelectedFile();
         DocumentBuilderFactory dbf=DocumentBuilderFactory.newInstance();
         DocumentBuilder db = null;
@@ -194,17 +187,6 @@ public class Controller {
 
             studentList.addStudent(student);
         }
-
-       /* if(filter.accept(file)){
-            XStream xstream = new XStream(new StaxDriver());
-            xstream.alias("student", Student.class);
-            xstream.alias("studentList", StudentList.class);
-
-            xstream.fromXML(file, studentList);
-
-            // this.updateModel();
-        }
-        // this.updateModel();*/
     }
 
     public List<String[]> getRows( int TypeOfRows){

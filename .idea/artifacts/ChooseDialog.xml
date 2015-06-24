@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ChooseDialog">
+    <output-path>$PROJECT_DIR$/out/artifacts/ChooseDialog</output-path>
+    <root id="archive" name="ChooseDialog.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/myFileChooser" />
+      <element id="file-copy" path="$PROJECT_DIR$/driveIcon.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/fileIcon.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/folder_up.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/folderIcon.jpg" />
+      <element id="file-copy" path="$PROJECT_DIR$/homeIcon.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/listIcon.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/tableIcon.png" />
+      <element id="file-copy" path="$PROJECT_DIR$/tileIcon.png" />
+    </root>
+  </artifact>
+</component>
